@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Métadonnées SEO optimisées -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cascades de Banfora - La Côte d'Azur du Burkina Faso | Site Officiel</title>
-    <meta name="description" content="Découvrez les magnifiques Cascades de Banfora (Karfiguéla), joyau naturel du Burkina Faso. Réservez votre visite, explorez les chutes d'eau et vivez une expérience inoubliable.">
-    <meta name="keywords" content="Cascades Banfora, Karfiguéla, tourisme Burkina Faso, chutes d'eau, nature, visite guidée, réservation groupe, Banfora tourisme">
-    <meta name="author" content="Cascades de Banfora - NTIC SOLUTION">
-    <meta property="og:title" content="Cascades de Banfora - La Côte d'Azur du Burkina Faso">
-    <meta property="og:description" content="Découvrez l'un des sites touristiques les plus importants du Burkina Faso">
-    <meta property="og:image" content="https://www.infosculturedufaso.net/wp-content/uploads/2025/05/FB_IMG_1746896613718.jpg">
-    <meta property="og:url" content="https://cascades.tannounyan.online">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Tannounyan - Portail des services publics et privés de la région des Cascades (Burkina Faso)</title>
+    <meta name="description" content="Annuaire complet des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso. Trouvez administrations, pharmacies, hôpitaux, hôtels, restaurants et services locaux à Banfora, Sindou et toute la région.">
+    <meta name="keywords" content="Tannounyan, région des Cascades, Burkina Faso, Banfora, Sindou, services publics, administrations, pharmacies, hôtels, restaurants, santé, transport, commerces">
+    <meta name="author" content="NTIC Solution">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Tannounyan - Portail des services de la région des Cascades">
+    <meta property="og:description" content="Annuaire complet des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tannounyan.online">
+    
+    <!-- Schema.org markup pour référencement local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tannounyan.online",
+        "description": "Portail des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso",
+        "url": "https://tannounyan.online",
+        "publisher": {
+            "@type": "Organization",
+            "name": "NTIC Solution",
+            "url": "https://nticsolution.org",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Banfora",
+                "addressRegion": "Cascades",
+                "addressCountry": "BF"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/africa.png">
+    
+    <!-- Feuilles de style externes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles CSS améliorés -->
     <style>
-        /* Variables globales */
+        /* Variables et reset améliorés */
         :root {
-            --cascade-blue: #4a90e2;
-            --jungle-green: #2e8b57;
-            --rock-brown: #8b7355;
-            --sunset-orange: #ff7f50;
-            --leaf-green: #7cfc00;
-            --water-light: #e0f7fa;
-            --text-dark: #1a1a1a;
-            --text-light: #ffffff;
-            --gradient-primary: linear-gradient(135deg, var(--cascade-blue) 0%, var(--jungle-green) 100%);
-            --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.6) 100%);
-            --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-medium: 0 15px 40px rgba(0,0,0,0.12);
-            --shadow-hard: 0 20px 60px rgba(0,0,0,0.15);
-            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --border-radius: 12px;
+            --primary-color: #2a6e3f;
+            --secondary-color: #d4a017;
+            --accent-color: #1e4a2b;
+            --light-color: #f8f9fa;
+            --dark-color: #333;
+            --gray-color: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
         }
         
-        /* Reset et styles de base */
         * {
             margin: 0;
             padding: 0;
@@ -45,73 +67,496 @@
         
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: #f5f5f5;
-            color: var(--text-dark);
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f5f5;
             overflow-x: hidden;
-            opacity: 0;
-            animation: fadeInBody 1s ease forwards;
         }
         
-        @keyframes fadeInBody {
-            to { opacity: 1; }
-        }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
         }
         
-        /* Préloader */
-        #preloader {
-            position: fixed;
+        .text-center {
+            text-align: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header amélioré */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero section améliorée */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--gradient-primary);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
+            background: linear-gradient(45deg, rgba(42, 110, 63, 0.7), rgba(30, 74, 43, 0.7));
+            z-index: 1;
         }
         
-        .loader {
-            width: 100px;
-            height: 100px;
+        .hero > .container {
             position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background-color: #b38714;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+        }
+        
+        /* Section styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-light {
+            background-color: white;
+        }
+        
+        .section-dark {
+            background-color: #f8f9fa;
+        }
+        
+        /* Services grid améliorée */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-icon {
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            min-height: 3rem;
+        }
+        
+        /* Provinces section améliorée */
+        .provinces-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .province-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .province-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .province-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .province-content {
+            padding: 25px;
+        }
+        
+        .province-content ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+        
+        .province-content li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 5px;
+        }
+        
+        .province-content li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        /* Search section améliorée */
+        .search-section {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .search-section .section-title {
+            color: white;
+        }
+        
+        .search-section .section-title::after {
+            background-color: var(--secondary-color);
+        }
+        
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            display: flex;
             margin-bottom: 20px;
         }
         
-        .loader-inner {
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .search-box button {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .search-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .search-category {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .search-category:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .search-category.active {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+        
+        /* Statistics section ajoutée */
+        .stats-section {
+            background-color: white;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        /* Results section améliorée */
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .result-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .result-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .result-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
             border-radius: 50%;
-            border: 4px solid transparent;
-            border-top-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .result-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .result-type {
+            display: inline-block;
+            background-color: #e9f5ee;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .result-details p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .result-details i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary-color);
+            width: 40px;
+            height: 40px;
             animation: spin 1s linear infinite;
-        }
-        
-        .loader-inner:nth-child(2) {
-            border-top-color: var(--sunset-orange);
-            animation: spin 1.5s linear infinite reverse;
-        }
-        
-        .loader-inner:nth-child(3) {
-            border-top-color: var(--leaf-green);
-            animation: spin 2s linear infinite;
-            width: 70%;
-            height: 70%;
-            top: 15%;
-            left: 15%;
+            margin: 0 auto 15px;
         }
         
         @keyframes spin {
@@ -119,2111 +564,1145 @@
             100% { transform: rotate(360deg); }
         }
         
-        .loading-text {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 500;
-            animation: pulse 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-        
-        /* Header et navigation */
-        header {
-            background: var(--gradient-hero), url('https://www.infosculturedufaso.net/wp-content/uploads/2025/05/FB_IMG_1746896613718.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            min-height: 700px;
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 5%;
-            position: relative;
-            overflow: hidden;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        }
-        
-        /* Animation d'eau */
-        .water-animation {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url('https://www.infosculturedufaso.net/wp-content/uploads/2025/05/FB_IMG_1746896613718.jpg');
-            background-size: cover;
-            opacity: 0.6;
-            animation: waterFlow 20s linear infinite;
-            z-index: 1;
-        }
-        
-        @keyframes waterFlow {
-            0% { background-position: 0 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        /* Bulles d'eau */
-        .bubble {
-            position: absolute;
-            bottom: 0;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: rise 15s infinite ease-in;
-            pointer-events: none;
-        }
-        
-        @keyframes rise {
-            0% {
-                transform: translateY(0) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1.5);
-                opacity: 0;
-            }
-        }
-        
-        /* Logo */
-        .logo {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 1000;
-        }
-        
-        .logo i {
-            font-size: 2.8rem;
-            color: var(--cascade-blue);
-            animation: waterShine 3s infinite;
-            filter: drop-shadow(0 0 8px rgba(74, 144, 226, 0.5));
-        }
-        
-        @keyframes waterShine {
-            0%, 100% { 
-                filter: drop-shadow(0 0 5px rgba(74, 144, 226, 0.5));
-                transform: scale(1);
-            }
-            50% { 
-                filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.8));
-                transform: scale(1.1);
-            }
-        }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            color: white;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* Navigation desktop */
-        .desktop-nav {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            z-index: 1000;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: var(--transition-smooth);
-            position: relative;
-            font-size: 1.05rem;
-        }
-        
-        .nav-links a:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--sunset-orange);
-            transition: all 0.3s;
-            transform: translateX(-50%);
-        }
-        
-        .nav-links a:hover:after {
-            width: 70%;
-        }
-        
-        /* Menu hamburger mobile */
-        .hamburger {
-            display: none;
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: white;
-            font-size: 1.8rem;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            z-index: 1001;
-            backdrop-filter: blur(10px);
-            transition: var(--transition-smooth);
-        }
-        
-        .hamburger:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.05);
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 300px;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.95);
-            padding: 80px 30px 30px;
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 999;
-            backdrop-filter: blur(10px);
-        }
-        
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-        
-        .close-menu {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.8rem;
-            cursor: pointer;
-            padding: 5px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition-smooth);
-        }
-        
-        .close-menu:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: rotate(90deg);
-        }
-        
-        .mobile-menu ul {
-            list-style: none;
-        }
-        
-        .mobile-menu a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .mobile-menu a:hover {
-            color: var(--sunset-orange);
-            padding-left: 10px;
-        }
-        
-        .mobile-menu a:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 0;
-            background: var(--sunset-orange);
-            transition: height 0.3s ease;
-        }
-        
-        .mobile-menu a:hover:after {
-            height: 20px;
-        }
-        
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 998;
-            backdrop-filter: blur(3px);
-        }
-        
-        .overlay.active {
-            display: block;
-        }
-        
-        /* Contenu hero */
-        .hero-content {
-            max-width: 850px;
-            z-index: 2;
-            position: relative;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.8rem;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-            animation: fadeInDown 1s ease;
-            line-height: 1.2;
-        }
-        
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease 0.3s both;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            animation: fadeIn 1s ease 0.6s both;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--sunset-orange);
-            color: white;
-            padding: 16px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.15rem;
-            transition: var(--transition-smooth);
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(255, 127, 80, 0.3);
-        }
-        
-        .cta-button:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
-        }
-        
-        .cta-button:hover {
-            background-color: #ff6b35;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(255, 127, 80, 0.4);
-        }
-        
-        .cta-button:hover:after {
-            animation: ripple 1s ease-out;
-        }
-        
-        @keyframes ripple {
-            0% {
-                transform: scale(0, 0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(40, 40);
-                opacity: 0;
-            }
-        }
-        
-        .cta-button.secondary {
-            background-color: var(--jungle-green);
-            box-shadow: 0 8px 25px rgba(46, 139, 87, 0.3);
-        }
-        
-        .cta-button.secondary:hover {
-            background-color: #2a7a4a;
-            box-shadow: 0 15px 35px rgba(46, 139, 87, 0.4);
-        }
-        
-        /* Sections générales */
-        section {
-            padding: 100px 5%;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 70px;
-            color: var(--jungle-green);
-            font-size: 2.8rem;
-            position: relative;
-            font-weight: 700;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 120px;
-            height: 4px;
-            background: var(--gradient-primary);
-            margin: 20px auto;
-            border-radius: 2px;
-            animation: expand 1s ease;
-        }
-        
-        @keyframes expand {
-            from { width: 0; }
-            to { width: 120px; }
-        }
-        
-        /* Section À propos */
-        #about {
-            background-color: white;
-        }
-        
-        .about-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .about-text {
-            padding-right: 20px;
-        }
-        
-        .about-text h3 {
-            color: var(--rock-brown);
-            margin-bottom: 25px;
-            font-size: 2.2rem;
-            font-weight: 600;
-        }
-        
-        .about-text p {
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-        
-        .feature {
-            background-color: var(--water-light);
-            padding: 30px 25px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(74, 144, 226, 0.1);
-        }
-        
-        .feature:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gradient-primary);
-            transform: translateX(-100%);
-            transition: transform 0.5s;
-        }
-        
-        .feature:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-hard);
-        }
-        
-        .feature:hover:before {
-            transform: translateX(0);
-        }
-        
-        .feature i {
-            font-size: 3rem;
-            color: var(--cascade-blue);
-            margin-bottom: 20px;
-            transition: transform 0.5s;
-        }
-        
-        .feature:hover i {
-            transform: scale(1.2) rotate(5deg);
-        }
-        
-        .feature h3 {
-            color: var(--jungle-green);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        /* Section Galerie */
-        #gallery {
-            background-color: #f9f9f9;
-        }
-        
-        .gallery-container {
-            max-width: 1300px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 25px;
-        }
-        
-        .gallery-item {
-            height: 280px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            position: relative;
-            box-shadow: var(--shadow-soft);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hard);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.6s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.15);
-        }
-        
-        .gallery-item:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.8));
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-        
-        .gallery-item:hover:after {
-            opacity: 1;
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 25px;
-            color: white;
-            transform: translateY(100%);
-            transition: transform 0.4s;
-            z-index: 2;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-        
-        /* Section Réservation */
-        #reservation {
-            background-color: white;
-        }
-        
-        .reservation-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
-        }
-        
-        .pricing {
-            background-color: var(--water-light);
-            padding: 40px 35px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pricing:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(to right, var(--sunset-orange), var(--jungle-green));
-        }
-        
-        .pricing h3 {
-            color: var(--jungle-green);
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-        }
-        
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 18px 0;
-            border-bottom: 1px dashed #ccc;
-            transition: transform 0.3s;
-            align-items: center;
-        }
-        
-        .price-item:hover {
-            transform: translateX(10px);
-            border-bottom-color: var(--cascade-blue);
-        }
-        
-        .price-item:last-child {
-            border-bottom: none;
-        }
-        
-        .price-item .category {
-            font-weight: 600;
-            color: var(--jungle-green);
-            font-size: 1.1rem;
-        }
-        
-        .price-item .price {
-            font-weight: 700;
-            color: var(--sunset-orange);
-            font-size: 1.3rem;
-        }
-        
-        .reservation-form {
-            padding: 40px 35px;
-            background-color: #f9f9f9;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .reservation-form:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(to right, var(--jungle-green), var(--cascade-blue));
-        }
-        
-        .reservation-form h3 {
-            color: var(--jungle-green);
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-            position: relative;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--rock-brown);
-            font-size: 1.05rem;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px 18px;
-            border: 2px solid #e1e5e9;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: var(--transition-smooth);
-            background: white;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--cascade-blue);
-            box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        .group-types {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        
-        .group-type {
-            background-color: white;
-            padding: 20px 15px;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #e1e5e9;
-            transition: var(--transition-smooth);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .group-type:hover {
-            border-color: var(--cascade-blue);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .group-type.active {
-            border-color: var(--cascade-blue);
-            background-color: var(--water-light);
-            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
-        }
-        
-        .group-type i {
-            font-size: 2.5rem;
-            color: var(--cascade-blue);
-            transition: transform 0.3s;
-        }
-        
-        .group-type.active i {
-            transform: scale(1.2);
-        }
-        
-        .group-type p {
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-        
-        .submit-btn {
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            padding: 18px 30px;
-            width: 100%;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            position: relative;
-            overflow: hidden;
-            margin-top: 10px;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(74, 144, 226, 0.4);
-        }
-        
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-        
-        .submit-btn.loading {
-            pointer-events: none;
-            opacity: 0.8;
-        }
-        
-        .submit-btn.loading:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 24px;
-            height: 24px;
-            margin: -12px 0 0 -12px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        
-        .form-message {
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 10px;
-            display: none;
-            font-weight: 500;
-            text-align: center;
-        }
-        
-        .form-message.success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            display: block;
-        }
-        
-        .form-message.error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
-        }
-        
-        /* Section Contact */
-        #contact {
-            background-color: #f9f9f9;
-        }
-        
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 60px;
-        }
-        
-        .contact-info {
-            padding: 10px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 35px;
-            transition: transform 0.3s;
-            padding: 20px;
-            background: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-soft);
-        }
-        
-        .contact-item:hover {
-            transform: translateX(10px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .contact-item i {
-            font-size: 1.8rem;
-            color: var(--cascade-blue);
-            margin-right: 20px;
-            width: 40px;
-            text-align: center;
-            margin-top: 5px;
-        }
-        
-        .contact-item h4 {
-            color: var(--jungle-green);
-            margin-bottom: 8px;
-            font-size: 1.3rem;
-        }
-        
-        .contact-item p {
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        .contact-item a {
-            color: var(--cascade-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: var(--sunset-orange);
-            text-decoration: underline;
-        }
-        
-        .map-container {
-            height: 350px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            transition: transform 0.3s;
-        }
-        
-        .map-container:hover {
-            transform: scale(1.02);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Footer */
+        /* Footer amélioré */
         footer {
-            background: linear-gradient(135deg, #2c3e50 0%, #1a1a2e 100%);
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
             color: white;
-            padding: 60px 5% 30px;
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+            padding: 60px 0 20px;
         }
         
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
-        .footer-column h3 {
-            color: var(--leaf-green);
-            margin-bottom: 25px;
-            font-size: 1.6rem;
-            font-weight: 600;
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.8rem;
         }
         
-        .footer-column p, .footer-column a {
-            color: #ddd;
-            margin-bottom: 12px;
-            display: block;
-            text-decoration: none;
-            transition: color 0.3s;
+        .footer-logo p {
+            margin-top: 15px;
+            opacity: 0.9;
             line-height: 1.7;
         }
         
-        .footer-column a:hover {
+        .footer-links h4, .footer-contact h4 {
             color: white;
-            text-decoration: underline;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition-smooth);
+            margin-bottom: 20px;
             font-size: 1.2rem;
         }
         
-        .social-icons a:hover {
-            background-color: var(--sunset-orange);
-            transform: translateY(-5px) rotate(5deg);
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .footer-links ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            flex-shrink: 0;
+            width: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
         }
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #aaa;
-            font-size: 0.95rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
         
-        .copyright a {
-            color: var(--leaf-green);
+        /* Back to top button amélioré */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow);
+            border: none;
+        }
+        
+        .back-to-top:hover {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            transform: translateY(-5px);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Breadcrumb ajouté pour SEO */
+        .breadcrumb {
+            background-color: #f0f7f2;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb ol {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb li {
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb li:not(:last-child)::after {
+            content: "/";
+            margin-left: 5px;
+            color: var(--gray-color);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
             text-decoration: none;
-            font-weight: 600;
         }
         
-        .copyright a:hover {
+        .breadcrumb a:hover {
             text-decoration: underline;
         }
         
-        /* Modal de confirmation */
-        .confirmation-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            backdrop-filter: blur(5px);
-        }
-        
-        .confirmation-modal.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background: white;
-            padding: 50px 40px;
-            border-radius: var(--border-radius);
-            max-width: 550px;
-            width: 100%;
-            text-align: center;
-            position: relative;
-            animation: modalFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-hard);
-        }
-        
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-40px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-        
-        .modal-content h3 {
-            color: var(--jungle-green);
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-        
-        .modal-content p {
-            margin-bottom: 35px;
-            line-height: 1.8;
-            color: #555;
-            font-size: 1.1rem;
-        }
-        
-        .modal-content .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            padding: 18px 30px;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        
-        .modal-content .whatsapp-btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
-        }
-        
-        .modal-content .close-modal {
-            background-color: #f8f9fa;
-            color: var(--text-dark);
-            border: 2px solid #e1e5e9;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            width: 100%;
-            font-weight: 500;
-        }
-        
-        .modal-content .close-modal:hover {
-            background-color: #e9ecef;
-            border-color: #d1d9e0;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .hero-content h1 {
-                font-size: 3.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-        }
-        
+        /* Responsive styles améliorés */
         @media (max-width: 992px) {
-            .hero-content h1 {
-                font-size: 2.8rem;
+            .hero h2 {
+                font-size: 2.2rem;
             }
             
-            .nav-links {
-                display: none;
-            }
-            
-            .hamburger {
-                display: block;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .features {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-content,
-            .reservation-container,
-            .contact-container,
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .group-types {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .gallery-container {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-            
-            section {
-                padding: 80px 5%;
-            }
-            
-            .hero-content p {
-                font-size: 1.2rem;
+            .stat-number {
+                font-size: 2rem;
             }
         }
         
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.4rem;
+            .mobile-menu-btn {
+                display: block;
             }
             
-            .hero-content p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-                margin-bottom: 50px;
-            }
-            
-            .section-title:after {
-                width: 100px;
-            }
-            
-            .cta-button {
-                padding: 14px 35px;
-                font-size: 1.05rem;
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
                 width: 100%;
-                justify-content: center;
-            }
-            
-            .cta-buttons {
+                background-color: rgba(255, 255, 255, 0.98);
                 flex-direction: column;
-                gap: 15px;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+                backdrop-filter: blur(10px);
             }
             
-            .gallery-container {
-                grid-template-columns: 1fr;
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
             }
             
-            .group-types {
-                grid-template-columns: 1fr;
+            nav ul li {
+                margin: 0 0 15px 0;
             }
             
-            .modal-content {
-                padding: 40px 25px;
+            .hero {
+                padding: 80px 0;
             }
             
-            .logo h1 {
-                font-size: 1.5rem;
+            .hero h2 {
+                font-size: 1.8rem;
             }
             
-            .logo i {
-                font-size: 2.2rem;
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box input {
+                border-radius: var(--border-radius);
+                margin-bottom: 10px;
+            }
+            
+            .search-box button {
+                border-radius: var(--border-radius);
+            }
+            
+            section {
+                padding: 60px 0;
             }
         }
         
-        @media (max-width: 480px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
+        @media (max-width: 576px) {
             .section-title {
                 font-size: 1.8rem;
             }
             
-            .feature {
-                padding: 25px 20px;
-            }
-            
-            .feature i {
-                font-size: 2.5rem;
-            }
-            
-            .gallery-item {
-                height: 240px;
-            }
-            
-            .reservation-form,
-            .pricing {
-                padding: 30px 25px;
-            }
-            
-            .modal-content h3 {
-                font-size: 1.6rem;
-            }
-            
-            .modal-content p {
-                font-size: 1rem;
-            }
-        }
-        
-        /* Performance et accessibilité */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            body {
-                background: #121212;
-                color: #e0e0e0;
-            }
-            
-            #about,
-            #reservation {
-                background: #1e1e1e;
-            }
-            
-            #gallery,
-            #contact {
-                background: #1a1a1a;
-            }
-            
-            .feature,
-            .pricing,
-            .reservation-form,
-            .contact-item {
-                background: #2d2d2d;
-                color: #e0e0e0;
-            }
-            
-            .form-control {
-                background: #2d2d2d;
-                border-color: #404040;
-                color: #e0e0e0;
-            }
-        }
-        
-        /* Styles d'impression */
-        @media print {
-            .cta-buttons,
-            .hamburger,
-            .mobile-menu,
-            .social-icons,
-            .confirmation-modal,
-            .submit-btn {
-                display: none !important;
-            }
-            
-            body {
-                color: black;
-                background: white;
+            .service-card, .province-card {
+                margin-bottom: 20px;
             }
             
             section {
-                break-inside: avoid;
+                padding: 50px 0;
             }
+            
+            .footer-container {
+                gap: 30px;
+            }
+        }
+        
+        /* Animation pour le chargement des cartes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
         }
     </style>
 </head>
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <div class="loader-inner"></div>
-            <div class="loader-inner"></div>
-            <div class="loader-inner"></div>
-        </div>
-        <div class="loading-text">Chargement...</div>
-    </div>
-
-    <!-- Header avec animation d'eau -->
+    <!-- Header -->
     <header>
-        <div class="water-animation"></div>
-        <div class="logo">
-            <i class="fas fa-water"></i>
-            <h1>Cascades de Banfora</h1>
-        </div>
-        
-        <!-- Menu desktop -->
-        <nav class="desktop-nav">
-            <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#gallery">Galerie</a></li>
-                <li><a href="#reservation">Réservation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Menu mobile -->
-        <button class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </button>
-        
-        <div class="overlay" id="overlay"></div>
-        
-        <div class="mobile-menu" id="mobileMenu">
-            <button class="close-menu" id="closeMenu">
-                <i class="fas fa-times"></i>
-            </button>
-            <ul>
-                <li><a href="#about" class="mobile-link">À propos</a></li>
-                <li><a href="#gallery" class="mobile-link">Galerie</a></li>
-                <li><a href="#reservation" class="mobile-link">Réservation</a></li>
-                <li><a href="#contact" class="mobile-link">Contact</a></li>
-            </ul>
-        </div>
-        
-        <div class="hero-content">
-            <h1>Cascades de Banfora</h1>
-            <p>Découvrez la Côte d'Azur du Burkina Faso, un joyau naturel aux eaux limpides et aux paysages à couper le souffle</p>
-            <div class="cta-buttons">
-                <a href="#reservation" class="cta-button">
-                    <i class="fas fa-calendar-check"></i>
-                    Réserver une visite
-                </a>
-                <a href="#about" class="cta-button secondary">
-                    <i class="fas fa-info-circle"></i>
-                    Découvrir
-                </a>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <h1>Tannounyan<span>.online</span></h1>
             </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#provinces">Provinces</a></li>
+                    <li><a href="#statistiques">Statistiques</a></li>
+                    <li><a href="#recherche">Recherche</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    
-    <!-- Section À propos -->
-    <section id="about">
-        <h2 class="section-title">À propos des Cascades</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Les Cascades de Karfiguéla</h3>
-                <p>Situées à environ 12 km au nord-ouest de Banfora, les cascades de Banfora (ou cascades de Karfiguéla) constituent l'un des sites touristiques les plus importants du Burkina Faso. La région des Cascades tire son nom de ces chutes d'eau.</p>
-                <p>Dans la chaleur du Burkina, entendre le son de l'eau qui coule au loin est en soi une délivrance. Une dizaine de baignoires naturelles et de bains à remous remplis d'une eau limpide et glacée vous y attendent.</p>
-                <p>Le site tire son nom local, Karfiguéla, du village voisin. Il s'agit d'une nappe d'eau souterraine qui ressurgit, créant des chutes sur plusieurs niveaux le long du fleuve Comoé.</p>
-            </div>
-            
-            <div class="features">
-                <div class="feature">
-                    <i class="fas fa-tree"></i>
-                    <h3>Nature préservée</h3>
-                    <p>Une végétation comparable à celle des pays côtiers</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-water"></i>
-                    <h3>Eaux cristallines</h3>
-                    <p>Une dizaine de baignoires naturelles à découvrir</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-hiking"></i>
-                    <h3>Accès facile</h3>
-                    <p>Escaliers taillés dans la roche et passerelles</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-camera"></i>
-                    <h3>Vues spectaculaires</h3>
-                    <p>Des paysages à couper le souffle pour vos photos</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section Galerie -->
-    <section id="gallery">
-        <h2 class="section-title">Galerie</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuohh2pG28uXZl3q_H5V-2Ajpx7DgPG5MefA&s" 
-                     alt="Cascades de Banfora - Vue principale des chutes d'eau" 
-                     loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Chutes Principales</h3>
-                    <p>Les cascades majestueuses de Karfiguéla</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.infosculturedufaso.net/wp-content/uploads/2025/05/FB_IMG_1746896613718.jpg" 
-                     alt="Nature tropicale autour des cascades de Banfora" 
-                     loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Végétation Luxuriante</h3>
-                    <p>La flore exceptionnelle du site</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://media.routard.com/image/71/9/pt888.1213719.jpg" 
-                     alt="Rivière Comoé et végétation aux cascades" 
-                     loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Rivière Comoé</h3>
-                    <p>Le cours d'eau qui alimente les cascades</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://libreinfo.net/wp-content/uploads/2020/12/Banfora-2.jpg" 
-                     alt="Visiteurs profitant des baignoires naturelles" 
-                     loading="lazy">
-                <div class="gallery-overlay">
-                    <h3>Baignoires Naturelles</h3>
-                    <p>Les bassins naturels pour la baignade</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section Réservation -->
-    <section id="reservation">
-        <h2 class="section-title">Réserver une visite</h2>
-        <div class="reservation-container">
-            <div class="pricing">
-                <h3>Tarifs d'entrée</h3>
-                <div class="price-item">
-                    <span class="category">Visiteurs nationaux</span>
-                    <span class="price">200 F CFA</span>
-                </div>
-                <div class="price-item">
-                    <span class="category">Étrangers</span>
-                    <span class="price">1000 F CFA</span>
-                </div>
-                <div class="price-item">
-                    <span class="category">Enfants (moins de 12 ans)</span>
-                    <span class="price">Gratuit</span>
-                </div>
-                
-                <h3 style="margin-top: 40px; color: var(--rock-brown);">Groupes bénéficiant de tarifs spéciaux</h3>
-                <p style="margin-top: 15px; color: #666;">Nous proposons des visites guidées adaptées pour tous les types de groupes avec des tarifs préférentiels.</p>
-                
-                <h3 style="margin-top: 40px; color: var(--rock-brown);">Informations importantes</h3>
-                <p style="margin-top: 15px; font-style: italic; color: #666;">La seule stricte interdiction est de passer la nuit sur le site. Le site est ouvert tous les jours de 8h à 18h.</p>
-            </div>
-            
-            <div class="reservation-form">
-                <h3>Formulaire de réservation pour groupes</h3>
-                <div id="formMessage" class="form-message"></div>
-                <form id="bookingForm">
-                    <div class="form-group">
-                        <label for="groupType">Type de groupe</label>
-                        <div class="group-types">
-                            <div class="group-type active" data-value="school">
-                                <i class="fas fa-school"></i>
-                                <p>Établissement scolaire</p>
-                            </div>
-                            <div class="group-type" data-value="training">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <p>Centre de formation</p>
-                            </div>
-                            <div class="group-type" data-value="friends">
-                                <i class="fas fa-users"></i>
-                                <p>Groupe d'amis</p>
-                            </div>
-                            <div class="group-type" data-value="family">
-                                <i class="fas fa-home"></i>
-                                <p>Famille</p>
-                            </div>
-                        </div>
-                        <input type="hidden" id="groupType" name="groupType" value="school" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="groupName">Nom du groupe / Organisation</label>
-                        <input type="text" id="groupName" name="groupName" placeholder="Ex: Lycée Municipal" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="participants">Nombre de participants</label>
-                        <input type="number" id="participants" name="participants" min="3" max="500" placeholder="Ex: 25" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="visitDate">Date de visite souhaitée</label>
-                        <input type="date" id="visitDate" name="visitDate" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactName">Nom du responsable</label>
-                        <input type="text" id="contactName" name="contactName" placeholder="Ex: Kevin SANOU" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactEmail">Email de contact</label>
-                        <input type="email" id="contactEmail" name="contactEmail" placeholder="nticsolution.bf@email.com" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="contactPhone">Téléphone de contact</label>
-                        <input type="tel" id="contactPhone" name="contactPhone" placeholder="+226 05 58 58 68" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="specialRequests">Demandes spéciales</label>
-                        <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Visite guidée, pique-nique sur place, etc."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        <span>Envoyer la demande de réservation</span>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Section Contact -->
-    <section id="contact">
-        <h2 class="section-title">Contact et localisation</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Localisation</h4>
-                        <p>Cascades de Karfiguéla, à 12km au nord-ouest de Banfora, Burkina Faso</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-info-circle"></i>
-                    <div>
-                        <h4>À propos du site</h4>
-                        <p>Le site est ouvert tous les jours de 8h à 18h. Nuitée interdite sur place.</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-handshake"></i>
-                    <div>
-                        <h4>Notre engagement</h4>
-                        <p>Ce site est mis en ligne gracieusement par <a href="https://nticsolution.org"> <strong>NTIC SOLUTION</strong></a> pour contribuer au développement de la commune de Banfora et de toute la région.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126747.2936483476!2d-4.819256323200751!3d10.63320423471013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeb5ee8e928b3e3f%3A0x9cac4114b7c7b6c2!2sBanfora%20Waterfalls!5e0!3m2!1sen!2sbf!4v1691234567890!5m2!1sen!2sbf" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Carte des Cascades de Banfora">
-                </iframe>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Cascades de Banfora</h3>
-                <p>Découvrez l'un des sites touristiques les plus importants du Burkina Faso, véritable joyau naturel de la région des Cascades.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Liens rapides</h3>
-                <a href="#about">À propos des cascades</a>
-                <a href="#gallery">Galerie photos</a>
-                <a href="#reservation">Réservation groupes</a>
-                <a href="#contact">Contact et localisation</a>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Informations pratiques</h3>
-                <p><i class="far fa-clock"></i> Ouvert tous les jours: 8h - 18h</p>
-                <p><i class="fas fa-ban"></i> Nuitée interdite sur le site</p>
-                <p><i class="fas fa-ticket-alt"></i> Tarifs: 200-1000 FCFA</p>
-                <p><i class="fas fa-map-marker-alt"></i> Karfiguéla, Banfora, Burkina Faso</p>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>Ce site est mis en ligne gracieusement par <a href="https://nticsolution.org"> <strong>NTIC SOLUTION</strong></a> pour contribuer au développement de la commune de Banfora et de toute la région des Cascades.</p>
-            <p>&copy; <span id="currentYear">2026</span> Cascades de Banfora - Tous droits réservés</p>
-        </div>
-    </footer>
-    
-    <!-- Modal de confirmation -->
-    <div class="confirmation-modal" id="confirmationModal">
-        <div class="modal-content">
-            <h3>Demande de réservation envoyée !</h3>
-            <p>Votre demande a été préparée pour envoi via WhatsApp. Cliquez sur le bouton ci-dessous pour l'envoyer directement au service de réservation.</p>
-            <button class="whatsapp-btn" id="whatsappBtn">
-                <i class="fab fa-whatsapp"></i>
-                Envoyer via WhatsApp
-            </button>
-            <button class="close-modal" id="closeModal">Fermer</button>
+
+    <!-- Breadcrumb pour SEO -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="#accueil">Accueil</a></li>
+                <li>Région des Cascades (Tannounyan)</li>
+            </ol>
         </div>
     </div>
 
-    <script>
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            // Préloader
-            window.addEventListener('load', function() {
-                const preloader = document.getElementById('preloader');
-                setTimeout(() => {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            });
-
-            // Mettre à jour l'année du copyright
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-            // Types de groupe en français
-            const groupTypeNames = {
-                'school': 'Établissement scolaire',
-                'training': 'Centre de formation',
-                'friends': "Groupe d'amis",
-                'family': 'Famille'
-            };
-
-            // Animation pour la sélection du type de groupe
-            document.querySelectorAll('.group-type').forEach(item => {
-                item.addEventListener('click', event => {
-                    // Retirer la classe active de tous les éléments
-                    document.querySelectorAll('.group-type').forEach(el => {
-                        el.classList.remove('active');
-                    });
-                    
-                    // Ajouter la classe active à l'élément cliqué
-                    item.classList.add('active');
-                    
-                    // Mettre à jour la valeur du champ caché
-                    document.getElementById('groupType').value = item.getAttribute('data-value');
-                });
-            });
-
-            // Gestion de la soumission du formulaire
-            document.getElementById('bookingForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const submitBtn = document.getElementById('submitBtn');
-                const formMessage = document.getElementById('formMessage');
-                
-                // Récupération des données du formulaire
-                const groupType = document.getElementById('groupType').value;
-                const groupName = document.getElementById('groupName').value.trim();
-                const participants = document.getElementById('participants').value;
-                const visitDate = document.getElementById('visitDate').value;
-                const contactName = document.getElementById('contactName').value.trim();
-                const contactEmail = document.getElementById('contactEmail').value.trim();
-                const contactPhone = document.getElementById('contactPhone').value.trim();
-                const specialRequests = document.getElementById('specialRequests').value.trim();
-                
-                // Validation des champs
-                if (!groupName || !participants || !visitDate || !contactName || !contactEmail || !contactPhone) {
-                    showMessage('Veuillez remplir tous les champs obligatoires.', 'error');
-                    return;
-                }
-                
-                if (participants < 3 || participants > 500) {
-                    showMessage('Le nombre de participants doit être entre 3 et 500.', 'error');
-                    return;
-                }
-                
-                // Formatage de la date
-                const formattedDate = new Date(visitDate).toLocaleDateString('fr-FR', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                
-                // Stocker les données pour WhatsApp
-                window.reservationData = {
-                    groupType: groupTypeNames[groupType],
-                    groupName: groupName,
-                    participants: participants,
-                    visitDate: formattedDate,
-                    contactName: contactName,
-                    contactEmail: contactEmail,
-                    contactPhone: contactPhone,
-                    specialRequests: specialRequests || 'Aucune demande spéciale'
-                };
-                
-                // Afficher le bouton de chargement
-                submitBtn.classList.add('loading');
-                
-                // Simuler un délai d'envoi
-                setTimeout(() => {
-                    // Afficher le modal de confirmation
-                    document.getElementById('confirmationModal').classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Réinitialiser le formulaire
-                    this.reset();
-                    document.querySelectorAll('.group-type').forEach(el => el.classList.remove('active'));
-                    document.querySelector('.group-type[data-value="school"]').classList.add('active');
-                    document.getElementById('groupType').value = 'school';
-                    
-                    // Retirer le bouton de chargement
-                    submitBtn.classList.remove('loading');
-                    
-                    // Afficher un message de succès
-                    showMessage('Formulaire envoyé avec succès !', 'success');
-                }, 1500);
-            });
-
-            // Fonction pour afficher les messages
-            function showMessage(message, type) {
-                const formMessage = document.getElementById('formMessage');
-                formMessage.textContent = message;
-                formMessage.className = `form-message ${type}`;
-                
-                // Masquer le message après 5 secondes
-                setTimeout(() => {
-                    formMessage.className = 'form-message';
-                    formMessage.textContent = '';
-                }, 5000);
-            }
-
-            // Gestion du bouton WhatsApp
-            document.getElementById('whatsappBtn').addEventListener('click', function() {
-                if (!window.reservationData) return;
-                
-                // Création du message structuré
-                const message = `*NOUVELLE DEMANDE DE RÉSERVATION - CASCADES DE BANFORA*
-
-*Type de groupe:* ${window.reservationData.groupType}
-*Nom du groupe/organisation:* ${window.reservationData.groupName}
-*Nombre de participants:* ${window.reservationData.participants}
-*Date de visite souhaitée:* ${window.reservationData.visitDate}
-
-*INFORMATIONS DE CONTACT:*
-*Nom du responsable:* ${window.reservationData.contactName}
-*Email:* ${window.reservationData.contactEmail}
-*Téléphone:* ${window.reservationData.contactPhone}
-
-*DEMANDES SPÉCIALES:*
-${window.reservationData.specialRequests}
-
----
-Cette demande a été envoyée via le site web des Cascades de Banfora.`;
-                
-                // Encodage du message pour URL
-                const encodedMessage = encodeURIComponent(message);
-                
-                // Création du lien WhatsApp
-                const whatsappLink = `https://wa.me/+22602717155?text=${encodedMessage}`;
-                
-                // Ouvrir WhatsApp dans un nouvel onglet
-                window.open(whatsappLink, '_blank');
-                
-                // Fermer le modal
-                document.getElementById('confirmationModal').classList.remove('active');
-                document.body.style.overflow = '';
-                
-                // Afficher un message de confirmation
-                showMessage('WhatsApp ouvert avec votre message de réservation. Veuillez l\'envoyer pour finaliser votre demande.', 'success');
-            });
-
-            // Fermeture du modal
-            document.getElementById('closeModal').addEventListener('click', function() {
-                document.getElementById('confirmationModal').classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            // Fermer le modal en cliquant à l'extérieur
-            document.getElementById('confirmationModal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-
-            // Menu mobile
-            const hamburger = document.getElementById('hamburger');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const closeMenu = document.getElementById('closeMenu');
-            const overlay = document.getElementById('overlay');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            hamburger.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-
-            closeMenu.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            overlay.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            // Fermer le menu mobile après avoir cliqué sur un lien
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
-                });
-            });
-
-            // Définir la date minimum pour la réservation (demain)
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            const tomorrowFormatted = tomorrow.toISOString().split('T')[0];
-            document.getElementById('visitDate').min = tomorrowFormatted;
-
-            // Animation au défilement pour les sections
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            // Appliquer l'animation aux sections
-            document.querySelectorAll('section').forEach(section => {
-                observer.observe(section);
-            });
-
-            // Animation des bulles d'eau
-            function createBubbles() {
-                const header = document.querySelector('header');
-                const bubbleCount = 20;
-                
-                for (let i = 0; i < bubbleCount; i++) {
-                    setTimeout(() => {
-                        const bubble = document.createElement('div');
-                        bubble.classList.add('bubble');
-                        
-                        // Taille aléatoire
-                        const size = Math.random() * 60 + 20;
-                        bubble.style.width = `${size}px`;
-                        bubble.style.height = `${size}px`;
-                        
-                        // Position aléatoire
-                        bubble.style.left = `${Math.random() * 100}%`;
-                        
-                        // Délai d'animation aléatoire
-                        const delay = Math.random() * 5;
-                        bubble.style.animationDelay = `${delay}s`;
-                        
-                        // Durée d'animation aléatoire
-                        const duration = Math.random() * 10 + 10;
-                        bubble.style.animationDuration = `${duration}s`;
-                        
-                        header.appendChild(bubble);
-                        
-                        // Supprimer la bulle après l'animation
-                        setTimeout(() => {
-                            if (bubble.parentNode) {
-                                bubble.remove();
-                            }
-                        }, (duration + delay) * 1000);
-                    }, i * 150);
-                }
-            }
-
-            // Créer des bulles initiales
-            createBubbles();
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2>Portail des services de la région des Cascades (Tannounyan)</h2>
+            <p>Trouvez facilement tous les services publics et privés de la région des Cascades au Burkina Faso. Localisez administrations, hôpitaux, pharmacies, hôtels, restaurants, commerces et services locaux à Banfora, Sindou et dans toute la région.</p>
+            <a href="#recherche" class="btn btn-primary">Rechercher un service</a>
+        </div>
+    </section>
+ <!-- Search Section -->
+    <section class="search-section" id="recherche">
+        <div class="container">
+            <h2 class="section-title">Rechercher un service</h2>
+            <p>Trouvez rapidement les services dont vous avez besoin dans toute la région des Cascades (Tannounyan).</p>
             
-            // Créer des bulles toutes les 20 secondes
-            setInterval(createBubbles, 20000);
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Ex: Pharmacie, Hôtel, Banque, Médecin...">
+                    <button class="btn" id="searchBtn"><i class="fas fa-search"></i> Rechercher</button>
+                </div>
+                
+                <div class="search-categories">
+                    <div class="search-category" data-category="pharmacie">Pharmacies</div>
+                    <div class="search-category" data-category="hotel">Hôtels</div>
+                    <div class="search-category" data-category="restaurant">Restaurants</div>
+                    <div class="search-category" data-category="administration">Administrations</div>
+                    <div class="search-category" data-category="sante">Santé</div>
+                    <div class="search-category" data-category="transport">Transports</div>
+                    <div class="search-category" data-category="banque">Banques</div>
+                    <div class="search-category" data-category="commerce">Commerces</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            // Animation du logo
-            const logoIcon = document.querySelector('.logo i');
-            setInterval(() => {
-                logoIcon.style.transform = 'scale(1.1)';
+    <!-- Results Section -->
+    <section class="section-light" id="results">
+        <div class="container">
+            <h2 class="section-title">Services disponibles</h2>
+            <p id="resultsInfo">Cliquez sur une catégorie ou effectuez une recherche pour afficher les résultats.</p>
+            
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Recherche en cours...</p>
+            </div>
+            
+            <div class="results-container" id="resultsContainer">
+                <!-- Les résultats seront générés dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-light" id="services">
+        <div class="container">
+            <h2 class="section-title">Services disponibles</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Trouvez rapidement les services publics et privés dont vous avez besoin dans toute la région des Cascades (Tannounyan).</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Administrations publiques</h3>
+                        <p>Localisation, contacts et services offerts par les administrations régionales et locales : gouvernorat, mairies, préfectures.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Santé & Pharmacies</h3>
+                        <p>Centre hospitalier régional, centres de santé, pharmacies de garde, groupes pharmaceutiques et services médicaux.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hébergement & Restauration</h3>
+                        <p>Hôtels, auberges, restaurants, bars et autres établissements d'hébergement et de restauration touristique.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Transports & Mobilité</h3>
+                        <p>Compagnies de transport, gares routières, taxis, location de véhicules et services de mobilité dans la région.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Banques & Finances</h3>
+                        <p>Banques, institutions de microfinance, services financiers et établissements bancaires de la région.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Commerces & Services</h3>
+                        <p>Commerces divers, supermarchés, services professionnels, artisans et entreprises locales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provinces Section -->
+    <section class="section-dark" id="provinces">
+        <div class="container">
+            <h2 class="section-title">Provinces de la région des Cascades</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">La région des Cascades (Tannounyan) est composée de deux provinces, chacune avec ses spécificités géographiques, économiques et touristiques.</p>
+            
+            <div class="provinces-container">
+                <div class="province-card">
+                    <div class="province-header">
+                        <h3>Province de la Comoé</h3>
+                        <p>Chef-lieu : Banfora</p>
+                    </div>
+                    <div class="province-content">
+                        <p>Banfora, ville principale de la région, est réputée pour ses célèbres cascades, ses dômes de fabédougou et son activité économique dynamique. Elle abrite le gouvernorat de la région et de nombreux services administratifs.</p>
+                        <ul>
+                            <li>Gouvernorat de la région des Cascades</li>
+                            <li>Mairie de Banfora</li>
+                            <li>Centre Hospitalier Régional (CHR)</li>
+                            <li>Université Nazi Boni (antenne)</li>
+                            <li>Marché central de Banfora</li>
+                            <li>Gare routière principale</li>
+                            <li>Antennes bancaires (ECOBANK, BICIA-B, etc.)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="province-card">
+                    <div class="province-header">
+                        <h3>Province de la Léraba</h3>
+                        <p>Chef-lieu : Sindou</p>
+                    </div>
+                    <div class="province-content">
+                        <p>Sindou est célèbre pour ses pics rocheux impressionnants qui attirent les touristes. Cette province agricole offre des services adaptés à sa population rurale et aux visiteurs des sites touristiques.</p>
+                        <ul>
+                            <li>Préfecture de Sindou</li>
+                            <li>Centre de Santé et de Promotion Sociale (CSPS)</li>
+                            <li>Pharmacies communautaires</li>
+                            <li>Établissements d'accueil touristique</li>
+                            <li>Services agricoles (DRAS, etc.)</li>
+                            <li>Marchés hebdomadaires</li>
+                            <li>Écoles primaires et secondaires</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section" id="statistiques">
+        <div class="container">
+            <h2 class="section-title">La région en chiffres</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Quelques données clés sur la région des Cascades (Tannounyan) et ses services.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Provinces</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-label">Départements</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="27">0</div>
+                    <div class="stat-label">Services répertoriés</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="7">0</div>
+                    <div class="stat-label">Catégories de services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Contact Section -->
+    <section class="section-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Vous souhaitez référencer votre entreprise sur notre plateforme, signaler une erreur ou nous faire part de vos suggestions ? Contactez-nous !</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow);">
+                <h3 style="text-align: center; margin-bottom: 25px;">NTIC Solution - Promoteur du site</h3>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                    <div>
+                        <h4>Adresse</h4>
+                        <p>Banfora, Province de la Comoé<br>Région des Cascades, Burkina Faso</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                    <i class="fas fa-globe" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                    <div>
+                        <h4>Site web</h4>
+                        <p><a href="https://nticsolution.org" target="_blank" rel="noopener noreferrer">https://nticsolution.org</a></p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+                    <i class="fas fa-envelope" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:contact@tannounyan.online">contact@tannounyan.online</a></p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://nticsolution.org" target="_blank" rel="noopener noreferrer" class="btn">Visiter NTIC Solution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Tannounyan<span style="color: var(--secondary-color);">.online</span></h3>
+                    <p>Portail officiel des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso. Référencement et mise à jour permanente des services locaux.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#provinces">Provinces</a></li>
+                        <li><a href="#statistiques">Statistiques</a></li>
+                        <li><a href="#recherche">Recherche</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Coordonnées</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Banfora, Région des Cascades, Burkina Faso</p>
+                    <p><i class="fas fa-globe"></i> tannounyan.online</p>
+                    <p><i class="fas fa-envelope"></i> nticsolution.bf@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +226 05 58 58 68</p>
+                    <p><i class="fas fa-building"></i> Promoteur: NTIC Solution</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Tannounyan.online - Tous droits réservés. | Région des Cascades (Tannounyan), Burkina Faso | <a href="https://nticsolution.org" style="color: var(--secondary-color); text-decoration: none;" target="_blank" rel="noopener noreferrer">NTIC Solution</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Données réelles des services de la région des Cascades
+        const servicesData = [
+            {
+                id: 1,
+                name: "Gouvernorat de la région des Cascades",
+                type: "administration",
+                category: "Administration régionale",
+                address: "Avenue de la Nation, Banfora",
+                phone: "+226 20 90 10 01",
+                hours: "Lundi-Vendredi: 7h30-16h30",
+                description: "Siège de l'administration régionale des Cascades. Direction générale des services régionaux."
+            },
+            {
+                id: 2,
+                name: "Mairie de Banfora",
+                type: "administration",
+                category: "Administration communale",
+                address: "Centre-ville, Banfora",
+                phone: "+226 20 90 12 34",
+                hours: "Lundi-Vendredi: 7h30-16h30",
+                description: "Administration municipale de la commune de Banfora. Services d'état civil, urbanisme, etc."
+            },
+            {
+                id: 3,
+                name: "Centre Hospitalier Régional (CHR) de Banfora",
+                type: "sante",
+                category: "Hôpital public",
+                address: "Quartier Aviation, Banfora",
+                phone: "+226 20 90 10 10",
+                hours: "24h/24 - Urgences permanentes",
+                description: "Principal centre de santé de la région, consultations spécialisées, hospitalisations, urgences."
+            },
+            {
+                id: 4,
+                name: "Pharmacie de la Cascade",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "Rue du Commerce, Banfora",
+                phone: "+226 70 12 34 56",
+                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
+            },
+            {
+                id: 5,
+                name: "Hôtel Les Cascades",
+                type: "hotel",
+                category: "Hôtel 3 étoiles",
+                address: "Route de Sindou, Banfora",
+                phone: "+226 20 90 11 22",
+                hours: "Réception 24h/24",
+                description: "Hôtel de standing avec piscine, restaurant, salles de conférence et jardin tropical."
+            },
+            {
+                id: 6,
+                name: "Restaurant Le Karité",
+                type: "restaurant",
+                category: "Cuisine africaine et internationale",
+                address: "Boulevard de la Liberté, Banfora",
+                phone: "+226 70 23 45 67",
+                hours: "Tous les jours: 11h-23h",
+                description: "Spécialités burkinabè (riz gras, poulet bicyclette) et plats internationaux."
+            },
+            {
+                id: 7,
+                name: "ECOBANK Banfora",
+                type: "banque",
+                category: "Banque commerciale",
+                address: "Avenue de la Nation, Banfora",
+                phone: "+226 20 90 15 15",
+                hours: "Lundi-Vendredi: 8h-16h, Samedi: 8h-12h",
+                description: "Services bancaires complets: comptes, retraits, dépôts, transferts, crédits."
+            },
+            {
+                id: 8,
+                name: "Gare Routière de Banfora",
+                type: "transport",
+                category: "Transport en commun",
+                address: "Route de Bobo-Dioulasso, Banfora",
+                phone: "+226 70 34 56 78",
+                hours: "Tous les jours: 4h-22h",
+                description: "Départs pour Ouagadougou, Bobo-Dioulasso, Gaoua, et toutes les destinations nationales."
+            },
+            {
+                id: 9,
+                name: "Préfecture de Sindou",
+                type: "administration",
+                category: "Administration provinciale",
+                address: "Centre-ville, Sindou",
+                phone: "+226 20 95 12 34",
+                hours: "Lundi-Vendredi: 7h30-16h30",
+                description: "Représentation de l'État dans la province de la Léraba. Services administratifs déconcentrés."
+            },
+            {
+                id: 10,
+                name: "CSPS de Sindou",
+                type: "sante",
+                category: "Centre de santé",
+                address: "Quartier administratif, Sindou",
+                phone: "+226 70 45 67 89",
+                hours: "Lundi-Vendredi: 7h30-16h, Samedi: 8h-12h",
+                description: "Centre de Santé et de Promotion Sociale. Consultations, soins primaires, vaccinations."
+            },
+            {
+                id: 11,
+                name: "Auberge des Pics de Sindou",
+                type: "hotel",
+                category: "Auberge touristique",
+                address: "Route des Pics, Sindou",
+                phone: "+226 70 56 78 90",
+                hours: "Réception 7h-22h",
+                description: "Auberge au pied des pics de Sindou. Chambres simples, restaurant local, guide touristique."
+            },
+            {
+                id: 12,
+                name: "Pharmacie de la Solidarité",
+                type: "pharmacie",
+                category: "Pharmacie communautaire",
+                address: "Marché central, Sindou",
+                phone: "+226 70 67 89 01",
+                hours: "Lundi-Samedi: 8h-19h",
+                description: "Pharmacie communautaire proposant des médicaments essentiels à prix accessibles."
+            },
+            {
+                id: 13,
+                name: "BICIA-B Banfora",
+                type: "banque",
+                category: "Institution financière",
+                address: "Avenue de la Nation, Banfora",
+                phone: "+226 20 90 16 16",
+                hours: "Lundi-Vendredi: 8h-16h",
+                description: "Banque Internationale pour le Commerce, l'Industrie et l'Agriculture du Burkina."
+            },
+            {
+                id: 14,
+                name: "Marché Central de Banfora",
+                type: "commerce",
+                category: "Marché",
+                address: "Centre-ville, Banfora",
+                phone: "-",
+                hours: "Tous les jours: 6h-20h",
+                description: "Principal marché de la région. Produits locaux, artisanat, textiles, alimentation."
+            },
+            {
+                id: 15,
+                name: "Transport TSR (Transport Sindou Routes)",
+                type: "transport",
+                category: "Compagnie de transport",
+                address: "Gare routière, Banfora",
+                phone: "+226 70 78 90 12",
+                hours: "Lundi-Dimanche: 5h-20h",
+                description: "Compagnie de transport desservant Sindou, Orodara et les villages de la Léraba."
+            },
+            {
+                id: 16,
+                name: "Direction Régionale de l'Agriculture",
+                type: "administration",
+                category: "Administration technique",
+                address: "Quartier administratif, Banfora",
+                phone: "+226 20 90 13 13",
+                hours: "Lundi-Vendredi: 7h30-16h30",
+                description: "Direction des services agricoles de la région des Cascades."
+            },
+            {
+                id: 17,
+                name: "Hôtel Farafina",
+                type: "hotel",
+                category: "Hôtel 2 étoiles",
+                address: "Route de Bobo, Banfora",
+                phone: "+226 20 90 14 14",
+                hours: "Réception 24h/24",
+                description: "Hôtel confortable avec restaurant, bar et connexion Wi-Fi. Proche du centre-ville."
+            },
+            {
+                id: 18,
+                name: "Pharmacie du Progrès",
+                type: "pharmacie",
+                category: "Pharmacie",
+                address: "Quartier Commerce, Banfora",
+                phone: "+226 70 89 01 23",
+                hours: "Lundi-Samedi: 7h-21h, Dimanche: 9h-13h",
+                description: "Large gamme de médicaments, produits para-pharmaceutiques et matériel médical."
+            },
+            {
+                id: 19,
+                name: "Restaurant La Bonne Table",
+                type: "restaurant",
+                category: "Cuisine locale",
+                address: "Avenue de la Mairie, Banfora",
+                phone: "+226 70 90 12 34",
+                hours: "Tous les jours: 10h-23h",
+                description: "Spécialités de la région: poulet à la moambe, foutou banane, poisson braisé."
+            },
+            {
+                id: 20,
+                name: "Agence Coris Bank Banfora",
+                type: "banque",
+                category: "Banque",
+                address: "Boulevard de la Liberté, Banfora",
+                phone: "+226 20 90 17 17",
+                hours: "Lundi-Vendredi: 8h-16h, Samedi: 8h-12h",
+                description: "Services bancaires, transferts d'argent, microcrédits, épargne."
+            },
+            {
+                id: 21,
+                name: "Station Total Banfora",
+                type: "commerce",
+                category: "Station-service",
+                address: "Route de Bobo-Dioulasso, Banfora",
+                phone: "+226 20 90 18 18",
+                hours: "24h/24",
+                description: "Station-service Total avec boutique, aire de repos et garage mécanique."
+            },
+            {
+                id: 22,
+                name: "Centre Médical Saint Joseph",
+                type: "sante",
+                category: "Clinique privée",
+                address: "Quartier Résidentiel, Banfora",
+                phone: "+226 70 12 34 56",
+                hours: "Lundi-Samedi: 8h-19h, Urgences: 24h/24",
+                description: "Clinique privée avec consultations générales et spécialisées, laboratoire d'analyses."
+            },
+            {
+                id: 23,
+                name: "Bureau de Poste de Banfora",
+                type: "administration",
+                category: "Service postal",
+                address: "Avenue de la Poste, Banfora",
+                phone: "+226 20 90 19 19",
+                hours: "Lundi-Vendredi: 7h30-16h, Samedi: 8h-12h",
+                description: "Services postaux, envoi et réception de colis, mandats, télécommunications."
+            },
+            {
+                id: 24,
+                name: "Supermarkté NAFASO",
+                type: "commerce",
+                category: "Supermarché",
+                address: "Route de Sindou, Banfora",
+                phone: "+226 70 23 45 67",
+                hours: "Lundi-Samedi: 8h-20h, Dimanche: 9h-13h",
+                description: "Supermarché proposant produits alimentaires, boissons, produits d'entretien."
+            },
+            {
+                id: 25,
+                name: "Taxi-Ville Banfora",
+                type: "transport",
+                category: "Service de taxi",
+                address: "Place de la Mairie, Banfora",
+                phone: "+226 70 34 56 78",
+                hours: "24h/24",
+                description: "Service de taxis urbains pour déplacements dans Banfora et alentours."
+            },
+            {
+                id: 26,
+                name: "Cafétéria Le Délice",
+                type: "restaurant",
+                category: "Cafétéria",
+                address: "Centre-ville, Banfora",
+                phone: "+226 70 45 67 89",
+                hours: "Tous les jours: 6h-22h",
+                description: "Petite restauration, sandwichs, pâtisseries, boissons chaudes et froides."
+            },
+            {
+                id: 27,
+                name: "Agence Immobilière Cascades",
+                type: "commerce",
+                category: "Service immobilier",
+                address: "Boulevard de la Liberté, Banfora",
+                phone: "+226 70 56 78 90",
+                hours: "Lundi-Vendredi: 8h-17h, Samedi: 9h-13h",
+                description: "Location, vente de biens immobiliers, gestion de patrimoine."
+            }
+        ];
+
+        // Éléments DOM
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchCategories = document.querySelectorAll('.search-category');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultsInfo = document.getElementById('resultsInfo');
+        const loading = document.getElementById('loading');
+        const backToTopBtn = document.getElementById('backToTop');
+        const statNumbers = document.querySelectorAll('.stat-number');
+
+        // Menu mobile
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Fermer le menu mobile en cliquant sur un lien
+        document.querySelectorAll('#mainMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Recherche améliorée avec délai pour l'UX
+        let searchTimeout;
+        function performSearch(query = '', category = '') {
+            // Afficher l'animation de chargement
+            loading.style.display = 'block';
+            resultsContainer.innerHTML = '';
+            
+            // Simuler un délai pour une meilleure UX
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                let results = servicesData;
+                
+                if (query) {
+                    const searchTerm = query.toLowerCase();
+                    results = results.filter(service => 
+                        service.name.toLowerCase().includes(searchTerm) ||
+                        service.category.toLowerCase().includes(searchTerm) ||
+                        service.description.toLowerCase().includes(searchTerm) ||
+                        service.address.toLowerCase().includes(searchTerm)
+                    );
+                }
+                
+                if (category) {
+                    results = results.filter(service => service.type === category);
+                }
+                
+                displayResults(results);
+                loading.style.display = 'none';
+            }, 300);
+        }
+
+        // Affichage des résultats avec animation
+        function displayResults(results) {
+            resultsContainer.innerHTML = '';
+            
+            if (results.length === 0) {
+                resultsInfo.textContent = 'Aucun résultat trouvé. Essayez avec d\'autres termes.';
+                resultsInfo.style.color = '#dc3545';
+                return;
+            }
+            
+            resultsInfo.textContent = `${results.length} résultat(s) trouvé(s)`;
+            resultsInfo.style.color = 'var(--dark-color)';
+            
+            // Animer l'apparition des résultats
+            results.forEach((service, index) => {
                 setTimeout(() => {
-                    logoIcon.style.transform = 'scale(1)';
-                }, 300);
-            }, 3000);
+                    const resultCard = document.createElement('div');
+                    resultCard.className = 'result-card fade-in-up';
+                    
+                    // Déterminer l'icône en fonction du type
+                    let iconClass = 'fas fa-building';
+                    const iconMap = {
+                        'pharmacie': 'fas fa-clinic-medical',
+                        'hotel': 'fas fa-hotel',
+                        'restaurant': 'fas fa-utensils',
+                        'sante': 'fas fa-hospital',
+                        'banque': 'fas fa-university',
+                        'transport': 'fas fa-bus',
+                        'commerce': 'fas fa-store',
+                        'administration': 'fas fa-building'
+                    };
+                    
+                    iconClass = iconMap[service.type] || 'fas fa-building';
+                    
+                    resultCard.innerHTML = `
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <i class="${iconClass}"></i>
+                            </div>
+                            <div class="result-name">${service.name}</div>
+                        </div>
+                        <div class="result-type">${service.category}</div>
+                        <div class="result-details">
+                            <p><i class="fas fa-map-marker-alt"></i> ${service.address}</p>
+                            <p><i class="fas fa-phone"></i> ${service.phone}</p>
+                            <p><i class="fas fa-clock"></i> ${service.hours}</p>
+                            <p style="margin-top: 15px;">${service.description}</p>
+                        </div>
+                    `;
+                    
+                    resultsContainer.appendChild(resultCard);
+                }, index * 50); // Délai progressif pour l'animation
+            });
+        }
 
-            // Navigation fluide
+        // Événements de recherche améliorés
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            performSearch(query);
+            
+            // Mettre à jour l'URL pour le partage (simulé)
+            if (query) {
+                window.history.replaceState(null, null, `#recherche?q=${encodeURIComponent(query)}`);
+            }
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            const query = searchInput.value.trim();
+            if (query.length >= 2) {
+                performSearch(query);
+            } else if (query.length === 0) {
+                // Afficher tous les résultats si la recherche est vide
+                performSearch();
+            }
+        });
+
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                const query = searchInput.value.trim();
+                performSearch(query);
+            }
+        });
+
+        // Recherche par catégorie
+        let activeCategory = null;
+        searchCategories.forEach(category => {
+            category.addEventListener('click', () => {
+                const categoryType = category.getAttribute('data-category');
+                
+                // Si on clique sur la même catégorie, on la désactive
+                if (activeCategory === categoryType) {
+                    searchCategories.forEach(c => {
+                        c.classList.remove('active');
+                        c.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    });
+                    activeCategory = null;
+                    searchInput.value = '';
+                    performSearch();
+                } else {
+                    // Activer la nouvelle catégorie
+                    searchCategories.forEach(c => {
+                        c.classList.remove('active');
+                        c.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    });
+                    category.classList.add('active');
+                    category.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                    activeCategory = categoryType;
+                    searchInput.value = '';
+                    performSearch('', categoryType);
+                }
+            });
+        });
+
+        // Animation des statistiques
+        function animateStats() {
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-count'));
+                const duration = 1500; // 1.5 secondes
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 16);
+            });
+        }
+
+        // Observer pour l'animation des statistiques
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observer pour les animations au défilement
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initialisation au chargement de la page
+        window.addEventListener('DOMContentLoaded', () => {
+            // Observer la section des statistiques
+            const statsSection = document.getElementById('statistiques');
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+            
+            // Observer les cartes de services pour l'animation
+            document.querySelectorAll('.service-card, .province-card').forEach(card => {
+                fadeObserver.observe(card);
+            });
+            
+            // Afficher 6 résultats par défaut
+            const defaultResults = servicesData.slice(0, 6);
+            displayResults(defaultResults);
+            resultsInfo.textContent = "Voici quelques services populaires de la région. Effectuez une recherche ou cliquez sur une catégorie pour en trouver d'autres.";
+            
+            // Animation fluide pour les ancres
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
                     
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        e.preventDefault();
                         window.scrollTo({
-                            top: targetElement.offsetTop - 80,
+                            top: targetElement.offsetTop - 100,
                             behavior: 'smooth'
                         });
                     }
                 });
             });
-
-            // Effet de parallaxe sur le header
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const header = document.querySelector('header');
-                const waterAnimation = document.querySelector('.water-animation');
-                
-                if (header && waterAnimation) {
-                    header.style.transform = `translateY(${scrolled * 0.5}px)`;
-                    waterAnimation.style.transform = `translateY(${scrolled * 0.3}px)`;
-                }
-            });
-
-            // Ajouter des effets de hover aux cartes
-            document.querySelectorAll('.feature').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-12px)';
+            
+            // Initialiser les catégories avec animation
+            setTimeout(() => {
+                searchCategories.forEach((category, index) => {
+                    setTimeout(() => {
+                        category.style.transform = 'translateY(0)';
+                        category.style.opacity = '1';
+                    }, index * 100);
                 });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-
-            // Optimisation des images - lazy loading
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.addEventListener('load', function() {
-                    this.classList.add('loaded');
-                });
-            });
-
-            // Gestion du clavier pour l'accessibilité
-            document.addEventListener('keydown', function(e) {
-                // Fermer le modal avec Escape
-                if (e.key === 'Escape') {
-                    const modal = document.getElementById('confirmationModal');
-                    if (modal.classList.contains('active')) {
-                        modal.classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                    
-                    const mobile = document.getElementById('mobileMenu');
-                    if (mobile.classList.contains('active')) {
-                        mobile.classList.remove('active');
-                        document.getElementById('overlay').classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
-                }
-            });
-
-            // Web Share API
-            if (navigator.share) {
-                const shareBtn = document.createElement('button');
-                shareBtn.innerHTML = '<i class="fas fa-share-alt"></i> Partager';
-                shareBtn.className = 'cta-button secondary';
-                shareBtn.style.marginTop = '15px';
-                shareBtn.addEventListener('click', async () => {
-                    try {
-                        await navigator.share({
-                            title: 'Cascades de Banfora',
-                            text: 'Découvrez les magnifiques Cascades de Banfora au Burkina Faso',
-                            url: window.location.href
-                        });
-                    } catch (err) {
-                        console.log('Erreur de partage:', err);
-                    }
-                });
-                document.querySelector('.hero-content .cta-buttons').appendChild(shareBtn);
-            }
-
-            // Ajouter un bouton "retour en haut"
-            const scrollToTopBtn = document.createElement('button');
-            scrollToTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
-            scrollToTopBtn.style.cssText = `
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                width: 50px;
-                height: 50px;
-                background: var(--gradient-primary);
-                color: white;
-                border: none;
-                border-radius: 50%;
-                cursor: pointer;
-                font-size: 1.2rem;
-                z-index: 100;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: var(--transition-smooth);
-                box-shadow: var(--shadow-medium);
-            `;
-            document.body.appendChild(scrollToTopBtn);
-
-            scrollToTopBtn.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
-                    scrollToTopBtn.style.opacity = '1';
-                    scrollToTopBtn.style.transform = 'translateY(0)';
-                } else {
-                    scrollToTopBtn.style.opacity = '0';
-                    scrollToTopBtn.style.transform = 'translateY(20px)';
-                }
-            });
+            }, 500);
         });
-    </script>
 
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "TouristAttraction",
-        "name": "Cascades de Banfora",
-        "alternateName": "Cascades de Karfiguéla",
-        "description": "Les cascades de Banfora, également appelées cascades de Karfiguéla, sont l'un des sites touristiques les plus importants du Burkina Faso. Situées à 12km au nord-ouest de Banfora, elles offrent des baignoires naturelles et des paysages spectaculaires.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Banfora",
-            "addressRegion": "Cascades",
-            "addressCountry": "Burkina Faso"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "10.633333",
-            "longitude": "-4.766667"
-        },
-        "openingHours": "Mo-Su 08:00-18:00",
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-                "Sunday"
-            ],
-            "opens": "08:00",
-            "closes": "18:00"
-        },
-        "priceRange": "200 - 1000 FCFA",
-        "currenciesAccepted": "FCFA",
-        "image": [
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuohh2pG28uXZl3q_H5V-2Ajpx7DgPG5MefA&s",
-            "https://www.infosculturedufaso.net/wp-content/uploads/2025/05/FB_IMG_1746896613718.jpg",
-            "https://media.routard.com/image/71/9/pt888.1213719.jpg",
-            "https://libreinfo.net/wp-content/uploads/2020/12/Banfora-2.jpg"
-        ],
-        "url": "https://cascades.tannounyan.online",
-        "telephone": "+22602717155",
-        "sameAs": [
-            "https://www.infosculturedufaso.net/"
-        ]
-    }
+        // Prévenir la soumission du formulaire (si présent)
+        document.addEventListener('submit', function(e) {
+            if (e.target.tagName === 'FORM') {
+                e.preventDefault();
+            }
+        });
     </script>
 </body>
 </html>
