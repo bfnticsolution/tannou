@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tannounyan - Services publics et privés de la région</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Variables et reset */
+        :root {
+            --primary-color: #2a6e3f;
+            --secondary-color: #d4a017;
+            --accent-color: #1e4a2b;
+            --light-color: #f8f9fa;
+            --dark-color: #333;
+            --gray-color: #6c757d;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 60px;
+        }
+        
+        .hero h2 {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 28px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #b38714;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+        }
+        
+        /* Section styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-light {
+            background-color: white;
+        }
+        
+        .section-dark {
+            background-color: #f8f9fa;
+        }
+        
+        /* Services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            height: 120px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Provinces section */
+        .provinces-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .province-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .province-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .province-content {
+            padding: 25px;
+        }
+        
+        /* Search section */
+        .search-section {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+        }
+        
+        .search-section .section-title {
+            color: white;
+        }
+        
+        .search-section .section-title::after {
+            background-color: var(--secondary-color);
+        }
+        
+        .search-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            font-size: 1rem;
+        }
+        
+        .search-box button {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .search-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .search-category {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-category:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Results section */
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .result-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+        }
+        
+        .result-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .result-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .result-type {
+            display: inline-block;
+            background-color: #e9f5ee;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .result-details p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .result-details i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .footer-logo p {
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+        
+        .footer-links h4, .footer-contact h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-box input {
+                border-radius: var(--border-radius);
+                margin-bottom: 10px;
+            }
+            
+            .search-box button {
+                border-radius: var(--border-radius);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .service-card, .province-card {
+                margin-bottom: 20px;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <h1>Tannounyan<span>.online</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#provinces">Provinces</a></li>
+                    <li><a href="#recherche">Recherche</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2>Bienvenue à Tannounyan</h2>
+            <p>Découvrez tous les services publics et privés de la région des Cascades (Tannounyan), du Burkina Faso. Localisez administrations, pharmacies, hôtels, restaurants et bien plus encore.</p>
+            <a href="#recherche" class="btn btn-primary">Rechercher un service</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-light" id="services">
+        <div class="container">
+            <h2 class="section-title">Services disponibles</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Trouvez rapidement les services publics et privés dont vous avez besoin dans toute la région Tannounyan.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Administrations publiques</h3>
+                        <p>Localisation, contacts et services offerts par les administrations régionales et locales.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pharmacies & Santé</h3>
+                        <p>Pharmacies de garde, groupes pharmaceutiques, centres de santé et hôpitaux.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hébergement & Restauration</h3>
+                        <p>Hôtels, restaurants, bars et autres établissements d'hébergement et de restauration.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Transports</h3>
+                        <p>Compagnies de transport, gares et services de mobilité dans la région.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Institutions financières</h3>
+                        <p>Banques, institutions de microfinance et autres services financiers.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Commerces & Services</h3>
+                        <p>Commerces divers, services professionnels et entreprises locales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provinces Section -->
+    <section class="section-dark" id="provinces">
+        <div class="container">
+            <h2 class="section-title">Provinces de Tannounyan</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">La région Tannounyan est composée de deux provinces, chacune avec ses spécificités et ses services.</p>
+            
+            <div class="provinces-container">
+                <div class="province-card">
+                    <div class="province-header">
+                        <h3>Province de la Comoé</h3>
+                        <p>Chef-lieu : Banfora</p>
+                    </div>
+                    <div class="province-content">
+                        <p>Banfora, ville principale de la région, est réputée pour ses cascades et son activité économique dynamique. Vous y trouverez une large gamme de services.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Hôtel de Ville de Banfora</li>
+                            <li>Centre hospitalier régional</li>
+                            <li>Marché central de Banfora</li>
+                            <li>Gare routière</li>
+                            <li>Antennes bancaires</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="province-card">
+                    <div class="province-header">
+                        <h3>Province de la Léraba</h3>
+                        <p>Chef-lieu : Sindou</p>
+                    </div>
+                    <div class="province-content">
+                        <p>Sindou est célèbre pour ses pics rocheux impressionnants. Cette province offre des services adaptés à sa population et aux touristes.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Préfecture de Sindou</li>
+                            <li>Centre de santé de Sindou</li>
+                            <li>Pharmacies locales</li>
+                            <li>Établissements d'accueil touristique</li>
+                            <li>Services administratifs déconcentrés</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section" id="recherche">
+        <div class="container">
+            <h2 class="section-title">Rechercher un service</h2>
+            <p>Trouvez rapidement les services dont vous avez besoin dans toute la région Tannounyan.</p>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Ex: Pharmacie, Hôtel, Banque...">
+                    <button class="btn" id="searchBtn"><i class="fas fa-search"></i> Rechercher</button>
+                </div>
+                
+                <div class="search-categories">
+                    <div class="search-category" data-category="pharmacie">Pharmacies</div>
+                    <div class="search-category" data-category="hotel">Hôtels</div>
+                    <div class="search-category" data-category="restaurant">Restaurants</div>
+                    <div class="search-category" data-category="administration">Administrations</div>
+                    <div class="search-category" data-category="sante">Centres de santé</div>
+                    <div class="search-category" data-category="transport">Transports</div>
+                    <div class="search-category" data-category="banque">Banques</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section-light" id="results">
+        <div class="container">
+            <h2 class="section-title">Résultats de recherche</h2>
+            <p id="resultsInfo">Cliquez sur une catégorie ou effectuez une recherche pour afficher les résultats.</p>
+            
+            <div class="results-container" id="resultsContainer">
+                <!-- Les résultats seront générés dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Vous souhaitez référencer votre entreprise sur notre plateforme ou nous faire part de vos suggestions ? Contactez-nous !</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 30px; border-radius: var(--border-radius);">
+                <h3 style="text-align: center; margin-bottom: 25px;">NTIC Solution - Promoteur du site</h3>
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px;"></i>
+                    <div>
+                        <h4>Adresse</h4>
+                        <p>Banfora, Province de la Comoé<br>Région Tannounyan, Burkina Faso</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-globe" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px;"></i>
+                    <div>
+                        <h4>Site web</h4>
+                        <p><a href="https://nticsolution.org" target="_blank">https://nticsolution.org</a></p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="https://nticsolution.org" target="_blank" class="btn">Visiter NTIC Solution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Tannounyan<span style="color: var(--secondary-color);">.online</span></h3>
+                    <p>Portail des services publics et privés de la région Tannounyan (ex-Région des Cascades) au Burkina Faso.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#provinces">Provinces</a></li>
+                        <li><a href="#recherche">Recherche</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Coordonnées</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Banfora, Région Tannounyan, Burkina Faso</p>
+                    <p><i class="fas fa-globe"></i> tannounyan.online</p>
+                    <p><i class="fas fa-envelope"></i> contact@tannounyan.online</p>
+                    <p><i class="fas fa-building"></i> Promoteur: NTIC Solution</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Tannounyan.online - Tous droits réservés. | Région Tannounyan (ex-Région des Cascades), Burkina Faso</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        // Données des services (à remplacer par une base de données réelle)
+        const servicesData = [
+            {
+                id: 1,
+                name: "Hôtel de Ville de Banfora",
+                type: "administration",
+                category: "Administration publique",
+                address: "Avenue de la Mairie, Banfora",
+                phone: "+226 20 90 12 34",
+                hours: "Lun-Ven: 7h30-16h30",
+                description: "Siège de la municipalité de Banfora, services administratifs communaux."
+            },
+            {
+                id: 2,
+                name: "Pharmacie du Centre",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "Rue du Commerce, Banfora",
+                phone: "+226 70 12 34 56",
+                hours: "24h/24 - 7j/7",
+                description: "Pharmacie de garde principale de Banfora, médicaments et produits de santé."
+            },
+            {
+                id: 3,
+                name: "Hôtel Les Cascades",
+                type: "hotel",
+                category: "Hôtel 3 étoiles",
+                address: "Route de Sindou, Banfora",
+                phone: "+226 20 90 11 22",
+                hours: "Réception 24h/24",
+                description: "Hôtel de standing avec piscine, restaurant et salles de conférence."
+            },
+            {
+                id: 4,
+                name: "Restaurant Le Sindou",
+                type: "restaurant",
+                category: "Cuisine locale et internationale",
+                address: "Boulevard de la Liberté, Banfora",
+                phone: "+226 70 23 45 67",
+                hours: "Tous les jours: 11h-23h",
+                description: "Spécialités burkinabè et plats internationaux dans un cadre agréable."
+            },
+            {
+                id: 5,
+                name: "Centre Hospitalier Régional",
+                type: "sante",
+                category: "Hôpital public",
+                address: "Quartier Aviation, Banfora",
+                phone: "+226 20 90 10 10",
+                hours: "24h/24 - Urgences permanentes",
+                description: "Principal centre de santé de la région, consultations et hospitalisations."
+            },
+            {
+                id: 6,
+                name: "Banque BICIA-B",
+                type: "banque",
+                category: "Institution financière",
+                address: "Avenue de la Nation, Banfora",
+                phone: "+226 20 90 15 15",
+                hours: "Lun-Ven: 8h-16h, Sam: 8h-12h",
+                description: "Services bancaires, retraits, dépôts, transferts d'argent."
+            },
+            {
+                id: 7,
+                name: "Gare Routière de Banfora",
+                type: "transport",
+                category: "Transport en commun",
+                address: "Route de Bobo-Dioulasso, Banfora",
+                phone: "+226 70 34 56 78",
+                hours: "Tous les jours: 5h-22h",
+                description: "Départs pour toutes les destinations nationales et régionales."
+            },
+            {
+                id: 8,
+                name: "Préfecture de Sindou",
+                type: "administration",
+                category: "Administration publique",
+                address: "Centre-ville, Sindou",
+                phone: "+226 20 95 12 34",
+                hours: "Lun-Ven: 7h30-16h30",
+                description: "Représentation de l'État dans la province de la Léraba."
+            },
+            {
+                id: 9,
+                name: "Pharmacie de la Paix",
+                type: "pharmacie",
+                category: "Pharmacie de groupe",
+                address: "Rue du Marché, Sindou",
+                phone: "+226 70 45 67 89",
+                hours: "Lun-Sam: 8h-20h, Dim: 9h-13h",
+                description: "Médicaments et produits pharmaceutiques, conseils de santé."
+            }
+        ];
+
+        // Éléments DOM
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchCategories = document.querySelectorAll('.search-category');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const resultsInfo = document.getElementById('resultsInfo');
+        const backToTopBtn = document.getElementById('backToTop');
+
+        // Menu mobile
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Fermer le menu mobile en cliquant sur un lien
+        document.querySelectorAll('#mainMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Recherche
+        function performSearch(query = '', category = '') {
+            let results = servicesData;
+            
+            if (query) {
+                const searchTerm = query.toLowerCase();
+                results = results.filter(service => 
+                    service.name.toLowerCase().includes(searchTerm) ||
+                    service.category.toLowerCase().includes(searchTerm) ||
+                    service.description.toLowerCase().includes(searchTerm)
+                );
+            }
+            
+            if (category) {
+                results = results.filter(service => service.type === category);
+            }
+            
+            displayResults(results);
+        }
+
+        // Affichage des résultats
+        function displayResults(results) {
+            resultsContainer.innerHTML = '';
+            
+            if (results.length === 0) {
+                resultsInfo.textContent = 'Aucun résultat trouvé. Essayez avec d\'autres termes.';
+                return;
+            }
+            
+            resultsInfo.textContent = `${results.length} résultat(s) trouvé(s)`;
+            
+            results.forEach(service => {
+                const resultCard = document.createElement('div');
+                resultCard.className = 'result-card';
+                
+                // Déterminer l'icône en fonction du type
+                let iconClass = 'fas fa-building';
+                if (service.type === 'pharmacie') iconClass = 'fas fa-clinic-medical';
+                if (service.type === 'hotel') iconClass = 'fas fa-hotel';
+                if (service.type === 'restaurant') iconClass = 'fas fa-utensils';
+                if (service.type === 'sante') iconClass = 'fas fa-hospital';
+                if (service.type === 'banque') iconClass = 'fas fa-university';
+                if (service.type === 'transport') iconClass = 'fas fa-bus';
+                
+                resultCard.innerHTML = `
+                    <div class="result-header">
+                        <div class="result-icon">
+                            <i class="${iconClass}"></i>
+                        </div>
+                        <div class="result-name">${service.name}</div>
+                    </div>
+                    <div class="result-type">${service.category}</div>
+                    <div class="result-details">
+                        <p><i class="fas fa-map-marker-alt"></i> ${service.address}</p>
+                        <p><i class="fas fa-phone"></i> ${service.phone}</p>
+                        <p><i class="fas fa-clock"></i> ${service.hours}</p>
+                        <p style="margin-top: 15px;">${service.description}</p>
+                    </div>
+                `;
+                
+                resultsContainer.appendChild(resultCard);
+            });
+        }
+
+        // Événements de recherche
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            performSearch(query);
+        });
+
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                const query = searchInput.value.trim();
+                performSearch(query);
+            }
+        });
+
+        // Recherche par catégorie
+        searchCategories.forEach(category => {
+            category.addEventListener('click', () => {
+                const categoryType = category.getAttribute('data-category');
+                searchInput.value = '';
+                performSearch('', categoryType);
+                
+                // Mettre en surbrillance la catégorie sélectionnée
+                searchCategories.forEach(c => c.style.backgroundColor = 'rgba(255, 255, 255, 0.1)');
+                category.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            });
+        });
+
+        // Back to top button
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Afficher quelques résultats par défaut
+        window.addEventListener('DOMContentLoaded', () => {
+            // Afficher 3 résultats par défaut
+            const defaultResults = servicesData.slice(0, 3);
+            displayResults(defaultResults);
+            resultsInfo.textContent = "Voici quelques services populaires de la région. Effectuez une recherche pour en trouver d'autres.";
+            
+            // Animation fluide pour les ancres
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
