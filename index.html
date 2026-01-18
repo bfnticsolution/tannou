@@ -4,13 +4,13 @@
     <!-- Métadonnées SEO optimisées -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tannounyan - Portail des services publics et privés de la région des Cascades (Burkina Faso)</title>
-    <meta name="description" content="Annuaire complet des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso. Trouvez administrations, pharmacies, hôpitaux, hôtels, restaurants et services locaux à Banfora, Sindou et toute la région.">
-    <meta name="keywords" content="Tannounyan, région des Cascades, Burkina Faso, Banfora, Sindou, services publics, administrations, pharmacies, hôtels, restaurants, santé, transport, commerces">
+    <title>Tannounyan - Portail des services publics et privés de la région des Tannounyan (Burkina Faso)</title>
+    <meta name="description" content="Annuaire complet des services publics et privés de la région des Tannounyan au Burkina Faso. Trouvez administrations, pharmacies, hôpitaux, hôtels, restaurants et services locaux à Banfora, Sindou et toute la région.">
+    <meta name="keywords" content="Tannounyan, région des Tannounyan, Burkina Faso, Banfora, Sindou, services publics, administrations, pharmacies, hôtels, restaurants, santé, transport, commerces">
     <meta name="author" content="NTIC Solution">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Tannounyan - Portail des services de la région des Cascades">
-    <meta property="og:description" content="Annuaire complet des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso">
+    <meta property="og:title" content="Tannounyan - Portail des services de la région des Tannounyan">
+    <meta property="og:description" content="Annuaire complet des services publics et privés de la région des Tannounyan au Burkina Faso">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tannounyan.online">
     
@@ -20,7 +20,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Tannounyan.online",
-        "description": "Portail des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso",
+        "description": "Portail des services publics et privés de la région des Tannounyan au Burkina Faso",
         "url": "https://tannounyan.online",
         "publisher": {
             "@type": "Organization",
@@ -179,6 +179,38 @@
             cursor: pointer;
         }
         
+        /* Annonces défilantes */
+        .announcement-bar {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .announcement-container {
+            display: flex;
+            animation: marquee 25s linear infinite;
+            white-space: nowrap;
+        }
+        
+        .announcement-item {
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .announcement-item i {
+            color: var(--secondary-color);
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
         /* Hero section améliorée */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -199,7 +231,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(42, 110, 63, 0.7), rgba(30, 74, 43, 0.7));
+            background: linear-gradient(45deg, rgba(42, 110, 63, 0.7), rgba(5, 70, 26, 0.7));
             z-index: 1;
         }
         
@@ -224,7 +256,7 @@
         
         .btn {
             display: inline-block;
-            background-color: var(--secondary-color);
+            background-color: #b38714;
             color: white;
             padding: 12px 28px;
             border-radius: var(--border-radius);
@@ -249,6 +281,35 @@
         
         .btn-primary:hover {
             background-color: var(--accent-color);
+        }
+        
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+        
+        .btn-localiser {
+            background-color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .btn-contacter {
+            background-color: #17a2b8;
+        }
+        
+        .btn-reserver {
+            background-color: #28a745;
+        }
+        
+        .btn-commander {
+            background-color: #dc3545;
+        }
+        
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
         }
         
         /* Section styles */
@@ -302,14 +363,20 @@
             box-shadow: var(--shadow-hover);
         }
         
-        .service-icon {
-            height: 120px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #d4a017;
-            font-size: 2.5rem;
+        .service-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
         }
         
         .service-content {
@@ -473,22 +540,46 @@
         /* Results section améliorée */
         .results-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
         }
         
         .result-card {
             background-color: white;
             border-radius: var(--border-radius);
-            padding: 25px;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border-left: 4px solid var(--primary-color);
+            display: flex;
+            flex-direction: column;
         }
         
         .result-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+        }
+        
+        .result-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .result-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .result-card:hover .result-image img {
+            transform: scale(1.05);
+        }
+        
+        .result-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .result-header {
@@ -508,23 +599,30 @@
             justify-content: center;
             margin-right: 15px;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
         
         .result-name {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--dark-color);
+            line-height: 1.3;
         }
         
         .result-type {
             display: inline-block;
             background-color: #e9f5ee;
             color: var(--primary-color);
-            padding: 5px 10px;
+            padding: 5px 12px;
             border-radius: 30px;
             font-size: 0.8rem;
             margin-bottom: 15px;
             font-weight: 500;
+            align-self: flex-start;
+        }
+        
+        .result-details {
+            margin-bottom: 20px;
         }
         
         .result-details p {
@@ -539,6 +637,7 @@
             width: 20px;
             text-align: center;
             flex-shrink: 0;
+            margin-top: 2px;
         }
         
         /* Loading animation */
@@ -734,6 +833,10 @@
             .stat-number {
                 font-size: 2rem;
             }
+            
+            .results-container {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
         }
         
         @media (max-width: 768px) {
@@ -792,6 +895,15 @@
             section {
                 padding: 60px 0;
             }
+            
+            .announcement-item {
+                padding: 0 20px;
+                font-size: 0.85rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
         }
         
         @media (max-width: 576px) {
@@ -809,6 +921,10 @@
             
             .footer-container {
                 gap: 30px;
+            }
+            
+            .results-container {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -855,12 +971,30 @@
         </div>
     </header>
 
+    <!-- Section annonces défilantes -->
+    <div class="announcement-bar">
+        <div class="announcement-container">
+            <div class="announcement-item">
+                <i class="fas fa-bullhorn"></i>
+                <span><strong>Nouveau :</strong> Référencement gratuit pour les commerces locaux jusqu'au 30 juin !</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-star"></i>
+                <span><strong>Offre spéciale :</strong> 15% de réduction dans les hôtels partenaires avec le code TANNOUNYAN15</span>
+            </div>
+            <div class="announcement-item">
+                <i class="fas fa-info-circle"></i>
+                <span><strong>Pharmacies de garde :</strong> Consultez la liste actualisée des pharmacies ouvertes 24h/24</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Breadcrumb pour SEO -->
     <!-- <div class="breadcrumb">
         <div class="container">
             <ol>
                 <li><a href="#accueil">Accueil</a></li>
-                <li>Région des Cascades (Tannounyan)</li>
+                <li>Région des Tannounyan</li>
             </ol>
         </div>
     </div>-->
@@ -869,11 +1003,12 @@
     <section class="hero" id="accueil">
         <div class="container">
             <h2>Portail des services de la région des Tannounyan</h2>
-            <p>Trouvez facilement tous les services publics et privés de la région ici ! <br>Les administrations, hôpitaux, pharmacies, hôtels, restaurants, commerces et services locaux.</p>
+            <p>Trouvez facilement tous les services publics et privés de la région ici !</p>
             <a href="#recherche" class="btn btn-primary">Rechercher un service</a>
         </div>
     </section>
- <!-- Search Section -->
+
+    <!-- Search Section -->
     <section class="search-section" id="recherche">
         <div class="container">
             <h2 class="section-title">Rechercher un service</h2>
@@ -886,13 +1021,13 @@
                 </div>
                 
                 <div class="search-categories">
+                    <div class="search-category" data-category="administration">Administrations</div>
                     <div class="search-category" data-category="pharmacie">Pharmacies</div>
+                    <div class="search-category" data-category="sante">Santé</div>
                     <div class="search-category" data-category="hotel">Hôtels</div>
                     <div class="search-category" data-category="restaurant">Restaurants</div>
-                    <div class="search-category" data-category="administration">Administrations</div>
-                    <div class="search-category" data-category="sante">Santé</div>
-                    <div class="search-category" data-category="transport">Transports</div>
                     <div class="search-category" data-category="banque">Banques</div>
+                    <div class="search-category" data-category="transport">Transports</div>
                     <div class="search-category" data-category="commerce">Commerces</div>
                 </div>
             </div>
@@ -917,15 +1052,15 @@
     </section>
 
     <!-- Services Section -->
-    <section class="section-light" id="services">
+        <!--<section class="section-light" id="services">
         <div class="container">
             <h2 class="section-title">Services disponibles</h2>
             <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Trouvez rapidement les services publics et privés de la région des Tannounyan.</p>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-building"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Administrations publiques">
                     </div>
                     <div class="service-content">
                         <h3>Administrations publiques</h3>
@@ -934,8 +1069,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clinic-medical"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1516549655669-df265cb61193?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Santé & Pharmacies">
                     </div>
                     <div class="service-content">
                         <h3>Santé & Pharmacies</h3>
@@ -944,8 +1079,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hotel"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hébergement & Restauration">
                     </div>
                     <div class="service-content">
                         <h3>Hébergement & Restauration</h3>
@@ -954,8 +1089,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bus"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Transports & Mobilité">
                     </div>
                     <div class="service-content">
                         <h3>Transports & Mobilité</h3>
@@ -964,8 +1099,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-university"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Banques & Finances">
                     </div>
                     <div class="service-content">
                         <h3>Banques & Finances</h3>
@@ -974,8 +1109,8 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-store"></i>
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Commerces & Services">
                     </div>
                     <div class="service-content">
                         <h3>Commerces & Services</h3>
@@ -984,13 +1119,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- Provinces Section -->
     <section class="section-dark" id="provinces">
         <div class="container">
-            <h2 class="section-title">Provinces de la région des Cascades</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">La région des Cascades (Tannounyan) est composée de deux provinces, chacune avec ses spécificités géographiques, économiques et touristiques.</p>
+            <h2 class="section-title">Provinces de la région des Tannounyan</h2>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">La région des Tannounyan est composée de deux provinces, chacune avec ses spécificités géographiques, économiques et touristiques.</p>
             
             <div class="provinces-container">
                 <div class="province-card">
@@ -1001,7 +1136,7 @@
                     <div class="province-content">
                         <p>Banfora, ville principale de la région, est réputée pour ses célèbres cascades, ses dômes de fabédougou et son activité économique dynamique. Elle abrite le gouvernorat de la région et de nombreux services administratifs.</p>
                         <ul>
-                            <li>Gouvernorat de la région des Cascades</li>
+                            <li>Gouvernorat de la région des Tannounyan</li>
                             <li>Mairie de Banfora</li>
                             <li>Centre Hospitalier Régional (CHR)</li>
                             <li>Université Nazi Boni (antenne)</li>
@@ -1038,7 +1173,7 @@
     <section class="stats-section" id="statistiques">
         <div class="container">
             <h2 class="section-title">La région en chiffres</h2>
-            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Quelques données clés sur la région des Cascades (Tannounyan) et ses services.</p>
+            <p class="text-center" style="max-width: 800px; margin: 0 auto 40px;">Quelques données clés sur la région des Tannounyan et ses services.</p>
             
             <div class="stats-container">
                 <div class="stat-item">
@@ -1050,18 +1185,17 @@
                     <div class="stat-label">Départements</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="32">0</div>
+                    <div class="stat-number" data-count="35">0</div>
                     <div class="stat-label">Services répertoriés</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-count="7">0</div>
+                    <div class="stat-number" data-count="8">0</div>
                     <div class="stat-label">Catégories de services</div>
                 </div>
             </div>
         </div>
     </section>
 
-   
     <!-- Contact Section -->
     <section class="section-dark" id="contact">
         <div class="container">
@@ -1074,7 +1208,7 @@
                     <i class="fas fa-map-marker-alt" style="color: var(--primary-color); font-size: 1.2rem; margin-right: 15px; margin-top: 5px;"></i>
                     <div>
                         <h4>Adresse</h4>
-                        <p>Banfora, Province de la Comoé<br>Région des Cascades, Burkina Faso</p>
+                        <p>Banfora, Province de la Comoé<br>Région des Tannounyan, Burkina Faso</p>
                     </div>
                 </div>
                 
@@ -1107,7 +1241,7 @@
             <div class="footer-container">
                 <div class="footer-logo">
                     <h3>Tannounyan<span style="color: var(--secondary-color);">.online</span></h3>
-                    <p>Portail officiel des services publics et privés de la région des Cascades (Tannounyan) au Burkina Faso. Référencement et mise à jour permanente des services locaux.</p>
+                    <p>Portail officiel des services publics et privés de la région des Tannounyan au Burkina Faso. Référencement et mise à jour permanente des services locaux.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -1130,7 +1264,7 @@
                 
                 <div class="footer-contact">
                     <h4>Coordonnées</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Banfora, Région des Cascades, Burkina Faso</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Banfora, Région des Tannounyan, Burkina Faso</p>
                     <p><i class="fas fa-globe"></i> tannounyan.online</p>
                     <p><i class="fas fa-envelope"></i> nticsolution.bf@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +226 05 58 58 68</p>
@@ -1150,17 +1284,21 @@
     </button>
 
     <script>
-        // Données réelles des services de la région des Cascades
+        // Données réelles des services de la région des Tannounyan avec coordonnées GPS
         const servicesData = [
             {
                 id: 1,
-                name: "Gouvernorat de la région des Cascades",
+                name: "Gouvernorat de la région des Tannounyan",
                 type: "administration",
                 category: "Administration régionale",
                 address: "RN7, Banfora",
                 phone: "+226 20 90 10 01",
                 hours: "Lundi-Vendredi: 7h30-16h30",
-                description: "Siège de l'administration régionale des Cascades. Direction générale des services régionaux."
+                description: "Siège de l'administration régionale des Tannounyan. Direction générale des services régionaux.",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6412,
+                longitude: -4.7594,
+                buttons: ["localiser"]
             },
             {
                 id: 2,
@@ -1170,7 +1308,11 @@
                 address: "Centre-ville, Banfora",
                 phone: "+226 20 91 03 46",
                 hours: "Lundi-Vendredi: 7h30-16h30",
-                description: "Administration municipale de la commune de Banfora. Services d'état civil, urbanisme, etc."
+                description: "Administration municipale de la commune de Banfora. Services d'état civil, urbanisme, etc.",
+                image: "https://images.unsplash.com/photo-1591953533105-1d0f47ed3e73?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6333,
+                longitude: -4.7667,
+                buttons: ["localiser"]
             },
             {
                 id: 3,
@@ -1180,77 +1322,39 @@
                 address: "Quartier Aviation, Banfora",
                 phone: "+226 20 91 00 11",
                 hours: "24h/24 - Urgences permanentes",
-                description: "Principal centre de santé de la région, consultations spécialisées, hospitalisations, urgences."
+                description: "Principal centre de santé de la région, consultations spécialisées, hospitalisations, urgences.",
+                image: "https://images.unsplash.com/photo-1516549655669-df265cb61193?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6485,
+                longitude: -4.7589,
+                buttons: ["localiser", "contacter"]
             },
             {
                 id: 4,
-                name: "PHARMACIE COMOE ",
+                name: "PHARMACIE COMOE",
                 type: "pharmacie",
                 category: "Pharmacie de garde",
                 address: "En face de UBA, Banfora",
                 phone: "+226 20 91 04 55",
                 hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6301,
+                longitude: -4.7582,
+                buttons: ["localiser", "contacter"]
             },
             {
                 id: 5,
-                name: "Pharmacie Divin Amour ",
+                name: "Pharmacie Divin Amour",
                 type: "pharmacie",
                 category: "Pharmacie de garde",
                 address: "Secteur 8 après les rails, Banfora",
                 phone: "+226 01 89 59 42",
                 hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
-            },
-            {
-                id: 6,
-                name: "Pharmacie Tatana ",
-                type: "pharmacie",
-                category: "Pharmacie de garde",
-                address: "Secteur 15, Banfora",
-                phone: "+226 70 60 70 68",
-                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
-            },
-            {
-                id: 7,
-                name: "Pharmacie CHARCLAM",
-                type: "pharmacie",
-                category: "Pharmacie de garde",
-                address: "En face du rond-point de la paix, Banfora",
-                phone: "+226 20 91 04 10",
-                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
-            },
-            {
-                id: 8,
-                name: "Pharmacie Ste Martha-Touba",
-                type: "pharmacie",
-                category: "Pharmacie de garde",
-                address: "En face de la DRENA, Banfora",
-                phone: "+226 20 91 19 84",
-                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
-            },
-            {
-                id: 9,
-                name: "Pharmacie Nadon",
-                type: "pharmacie",
-                category: "Pharmacie de garde",
-                address: "En face du grand marché, Banfora",
-                phone: "+226 20 91 01 66",
-                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
-                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends."
-            },
-            {
-                id: 10,
-                name: "Hotel Canne à Sucre",
-                type: "hotel",
-                category: "Hôtel 3 étoiles",
-                address: "Dans le centre ville ,pres du grand marché Banfora",
-                phone: "+226 70 00 57 63",
-                hours: "Réception 24h/24",
-                description: "Hôtel de standing avec piscine, restaurant, salles de conférence et jardin tropical."
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6283,
+                longitude: -4.7521,
+                buttons: ["localiser", "contacter"]
             },
             {
                 id: 6,
@@ -1260,7 +1364,11 @@
                 address: "Au grande marché, Banfora",
                 phone: "+226 66 42 02 34",
                 hours: "Tous les jours: 08h-23h",
-                description: "Spécialités burkinabè (riz gras, poulet bicyclette) et plats internationaux."
+                description: "Spécialités burkinabè (riz gras, poulet bicyclette) et plats internationaux.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6315,
+                longitude: -4.7632,
+                buttons: ["localiser", "commander"]
             },
             {
                 id: 7,
@@ -1270,7 +1378,11 @@
                 address: "Pres de la prefecture en face de la LONAB, Banfora",
                 phone: "+226 25 33 33 33",
                 hours: "Lundi-Vendredi: 8h-16h, Samedi: 8h-12h",
-                description: "Services bancaires complets: comptes, retraits, dépôts, transferts, crédits."
+                description: "Services bancaires complets: comptes, retraits, dépôts, transferts, crédits.",
+                image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6328,
+                longitude: -4.7599,
+                buttons: ["localiser"]
             },
             {
                 id: 8,
@@ -1280,7 +1392,11 @@
                 address: "Grand marche de Banfora",
                 phone: "+226 77 05 64 63",
                 hours: "Tous les jours: 04h-23h",
-                description: "Départs pour Ouagadougou, Bobo-Dioulasso, Gaoua, et toutes les destinations nationales."
+                description: "Départs pour Ouagadougou, Bobo-Dioulasso, Gaoua, et toutes les destinations nationales.",
+                image: "https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6305,
+                longitude: -4.7641,
+                buttons: ["localiser", "reserver"]
             },
             {
                 id: 9,
@@ -1290,29 +1406,54 @@
                 address: "Centre-ville, Banfora",
                 phone: "+226 20 91 00 02",
                 hours: "Lundi-Vendredi: 7h30-16h30",
-                description: "Représentation de l'État dans la province de la Comoé."
+                description: "Représentation de l'État dans la province de la Comoé.",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6352,
+                longitude: -4.7618,
+                buttons: ["localiser"]
             },
             {
                 id: 10,
                 name: "Hotel Administratif de Banfora",
                 type: "administration",
-                category: "Administration regional",
+                category: "Administration régionale",
                 address: "Quartier administratif, Banfora",
                 phone: "+226 20 91 00 09",
                 hours: "Lundi-Vendredi de 7h30-16h30",
-                description: "Représentation de l'Etat dans la region"
+                description: "Représentation de l'Etat dans la région",
+                image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6398,
+                longitude: -4.7603,
+                buttons: ["localiser"]
             },
             {
                 id: 11,
                 name: "Hotel Eben ezer de Banfora",
                 type: "hotel",
-                category: "Hotel 3 etoiles",
+                category: "Hotel 3 étoiles",
                 address: "Route de Bobo a 150m de Cascade Palace",
                 phone: "+226 72 16 65 61",
                 hours: "Réception 24h/24",
-                description: "Hotel confortable, chambre climatisé avec wifi, restaurant local, guide touristique."
+                description: "Hotel confortable, chambre climatisé avec wifi, restaurant local, guide touristique.",
+                image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6472,
+                longitude: -4.7514,
+                buttons: ["localiser", "reserver"]
             },
-            
+            {
+                id: 12,
+                name: "Hotel Canne à Sucre",
+                type: "hotel",
+                category: "Hôtel 3 étoiles",
+                address: "Dans le centre ville, près du grand marché Banfora",
+                phone: "+226 70 00 57 63",
+                hours: "Réception 24h/24",
+                description: "Hôtel de standing avec piscine, restaurant, salles de conférence et jardin tropical.",
+                image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6298,
+                longitude: -4.7625,
+                buttons: ["localiser", "reserver"]
+            },
             {
                 id: 13,
                 name: "UBA Banfora",
@@ -1321,7 +1462,11 @@
                 address: "Pres du petit marché en face de la pharmacie Comoé, Banfora",
                 phone: "+226 20 91 01 74",
                 hours: "Lundi-Vendredi: 8h-16h",
-                description: "Banque Internationale du Burkina."
+                description: "Banque Internationale du Burkina.",
+                image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6303,
+                longitude: -4.7585,
+                buttons: ["localiser"]
             },
             {
                 id: 14,
@@ -1331,7 +1476,11 @@
                 address: "Centre-ville, Banfora",
                 phone: "76 62 43 99",
                 hours: "Tous les jours: 04h-23h",
-                description: "Compagnie de transport desservant Banfora, bobo, Ouagadougou et environs."
+                description: "Compagnie de transport desservant Banfora, Bobo, Ouagadougou et environs.",
+                image: "https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6312,
+                longitude: -4.7638,
+                buttons: ["localiser", "reserver"]
             },
             {
                 id: 15,
@@ -1341,7 +1490,11 @@
                 address: "Gare routière, Banfora",
                 phone: "+226 70 77 38 17",
                 hours: "Tout les jours de 04h-23h",
-                description: "Compagnie de transport desservant Banfora Bobo Dioulasso Ouagadougou et environs."
+                description: "Compagnie de transport desservant Banfora Bobo Dioulasso Ouagadougou et environs.",
+                image: "https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6295,
+                longitude: -4.7652,
+                buttons: ["localiser", "reserver"]
             },
             {
                 id: 16,
@@ -1351,7 +1504,11 @@
                 address: "Quartier administratif, Banfora",
                 phone: "+226 70 43 00 55",
                 hours: "Lundi-Vendredi: 7h30-16h30",
-                description: "Direction des services agricoles de la région des Cascades."
+                description: "Direction des services agricoles de la région des Tannounyan.",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6402,
+                longitude: -4.7592,
+                buttons: ["localiser"]
             },
             {
                 id: 17,
@@ -1361,7 +1518,25 @@
                 address: "Route de Bobo, Banfora",
                 phone: "+226 20 91 28 28",
                 hours: "Réception 24h/24",
-                description: "Hôtel confortable avec restaurant, bar et connexion Wi-Fi. Proche du centre-ville."
+                description: "Hôtel confortable avec restaurant, bar et connexion Wi-Fi. Proche du centre-ville.",
+                image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6455,
+                longitude: -4.7543,
+                buttons: ["localiser", "reserver"]
+            },
+            {
+                id: 18,
+                name: "Pharmacie Tatana",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "Secteur 15, Banfora",
+                phone: "+226 70 60 70 68",
+                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6252,
+                longitude: -4.7518,
+                buttons: ["localiser", "contacter"]
             },
             {
                 id: 19,
@@ -1371,7 +1546,11 @@
                 address: "En face du lycee Saint Therese, Banfora",
                 phone: "+226 76941458",
                 hours: "Tous les jours: 08h-23h",
-                description: "Spécialités de la région: poulet à la moambe, foutou banane, poisson braisé."
+                description: "Spécialités de la région: poulet à la moambe, foutou banane, poisson braisé.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6278,
+                longitude: -4.7536,
+                buttons: ["localiser", "commander"]
             },
             {
                 id: 20,
@@ -1381,7 +1560,11 @@
                 address: "Au grand marché derrière la pharmacie Nadon, Banfora",
                 phone: "+226 25 31 23 23",
                 hours: "Lundi-Vendredi: 8h-16h, Samedi: 8h-12h",
-                description: "Services bancaires, transferts d'argent, microcrédits, épargne."
+                description: "Services bancaires, transferts d'argent, microcrédits, épargne.",
+                image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6309,
+                longitude: -4.7645,
+                buttons: ["localiser"]
             },
             {
                 id: 21,
@@ -1391,7 +1574,11 @@
                 address: "Route de Bobo-Dioulasso, Banfora",
                 phone: "+226 70314930",
                 hours: "24h/24",
-                description: "Station-service Total avec boutique, aire de repos et garage mécanique."
+                description: "Station-service Total avec boutique, aire de repos et garage mécanique.",
+                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6502,
+                longitude: -4.7485,
+                buttons: ["localiser"]
             },
             {
                 id: 22,
@@ -1401,7 +1588,11 @@
                 address: "Quartier Résidentiel, Banfora",
                 phone: "+226 72563544",
                 hours: "Lundi-Samedi: 8h-19h, Urgences: 24h/24",
-                description: "Clinique privée avec consultations générales et spécialisées, laboratoire d'analyses."
+                description: "Clinique privée avec consultations générales et spécialisées, laboratoire d'analyses.",
+                image: "https://images.unsplash.com/photo-1516549655669-df265cb61193?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6438,
+                longitude: -4.7572,
+                buttons: ["localiser", "contacter"]
             },
             {
                 id: 23,
@@ -1411,17 +1602,25 @@
                 address: "Avenue de la Poste, Banfora",
                 phone: "+226 66 74 11 45",
                 hours: "Lundi-Vendredi: 7h30-16h, Samedi: 8h-12h",
-                description: "Services postaux, envoi et réception de colis, mandats, télécommunications."
+                description: "Services postaux, envoi et réception de colis, mandats, télécommunications.",
+                image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6342,
+                longitude: -4.7605,
+                buttons: ["localiser"]
             },
             {
                 id: 24,
                 name: "Rahimo Banfora",
-                type: "Transport",
+                type: "transport",
                 category: "Compagnie de Transport",
                 address: "Centre Ville pres du petit marche, Banfora",
                 phone: "+226 76 62 43 99",
                 hours: "Tout les jours de 04h a 00h",
-                description: "Desservant les ville de Banfora, Bobo Dioulasso, Ouagadougou..."
+                description: "Desservant les ville de Banfora, Bobo Dioulasso, Ouagadougou...",
+                image: "https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6315,
+                longitude: -4.7630,
+                buttons: ["localiser", "reserver"]
             },
             {
                 id: 25,
@@ -1431,7 +1630,11 @@
                 address: "Place de la Mairie, Banfora",
                 phone: "+226 05 58 58 68",
                 hours: "24h/24",
-                description: "Service de taxis urbains pour déplacements dans Banfora et alentours."
+                description: "Service de taxis urbains pour déplacements dans Banfora et alentours.",
+                image: "https://images.unsplash.com/photo-1599058531687-6c864b8d6b2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6335,
+                longitude: -4.7612,
+                buttons: ["localiser", "reserver"]
             },
             {
                 id: 26,
@@ -1441,17 +1644,67 @@
                 address: "Centre-ville, Banfora",
                 phone: "+226 62 31 36 62",
                 hours: "Tous les jours: 6h-22h",
-                description: "Petite restauration, sandwichs, pâtisseries, boissons chaudes et froides."
+                description: "Petite restauration, sandwichs, pâtisseries, boissons chaudes et froides.",
+                image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6322,
+                longitude: -4.7620,
+                buttons: ["localiser", "commander"]
             },
             {
                 id: 27,
-                name: "Agence Immobilière Cascades",
+                name: "Agence Immobilière Tannounyan",
                 type: "commerce",
                 category: "Service immobilier",
                 address: "Boulevard de la Liberté, Banfora",
                 phone: "+226 77 03 09 41",
                 hours: "Lundi-Vendredi: 8h-17h, Samedi: 9h-13h",
-                description: "Location, vente de biens immobiliers, gestion de patrimoine."
+                description: "Location, vente de biens immobiliers, gestion de patrimoine.",
+                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6368,
+                longitude: -4.7590,
+                buttons: ["localiser"]
+            },
+            {
+                id: 28,
+                name: "Pharmacie CHARCLAM",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "En face du rond-point de la paix, Banfora",
+                phone: "+226 20 91 04 10",
+                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6345,
+                longitude: -4.7558,
+                buttons: ["localiser", "contacter"]
+            },
+            {
+                id: 29,
+                name: "Pharmacie Ste Martha-Touba",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "En face de la DRENA, Banfora",
+                phone: "+226 20 91 19 84",
+                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6382,
+                longitude: -4.7565,
+                buttons: ["localiser", "contacter"]
+            },
+            {
+                id: 30,
+                name: "Pharmacie Nadon",
+                type: "pharmacie",
+                category: "Pharmacie de garde",
+                address: "En face du grand marché, Banfora",
+                phone: "+226 20 91 01 66",
+                hours: "Lundi-Samedi: 7h30-20h, Dimanche: 9h-13h",
+                description: "Pharmacie principale de Banfora, médicaments et produits de santé. Garde les weekends.",
+                image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                latitude: 10.6308,
+                longitude: -4.7648,
+                buttons: ["localiser", "contacter"]
             }
         ];
 
@@ -1466,6 +1719,67 @@
         const loading = document.getElementById('loading');
         const backToTopBtn = document.getElementById('backToTop');
         const statNumbers = document.querySelectorAll('.stat-number');
+
+        // Fonction pour ouvrir Google Maps avec les coordonnées
+        function openGoogleMaps(latitude, longitude, name) {
+            const url = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}&query_place_id=${encodeURIComponent(name)}`;
+            window.open(url, '_blank');
+        }
+
+        // Fonction pour contacter par téléphone
+        function contactByPhone(phone) {
+            window.location.href = `tel:${phone}`;
+        }
+
+        // Fonction pour réserver (simulée)
+        function reserverService(name, phone) {
+            alert(`Réservation pour ${name}\n\nNous allons vous rediriger vers le numéro de téléphone pour effectuer votre réservation.`);
+            contactByPhone(phone);
+        }
+
+        // Fonction pour commander (simulée)
+        function commanderService(name, phone) {
+            alert(`Commande pour ${name}\n\nNous allons vous rediriger vers le numéro de téléphone pour passer votre commande.`);
+            contactByPhone(phone);
+        }
+
+        // Fonction pour créer les boutons selon le type de service
+        function createButtons(service) {
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'btn-group';
+            
+            service.buttons.forEach(buttonType => {
+                const button = document.createElement('button');
+                button.className = `btn btn-sm`;
+                
+                switch(buttonType) {
+                    case 'localiser':
+                        button.classList.add('btn-localiser');
+                        button.innerHTML = '<i class="fas fa-map-marker-alt"></i> Localiser';
+                        button.onclick = () => openGoogleMaps(service.latitude, service.longitude, service.name);
+                        break;
+                    case 'contacter':
+                        button.classList.add('btn-contacter');
+                        button.innerHTML = '<i class="fas fa-phone"></i> Contacter';
+                        button.onclick = () => contactByPhone(service.phone);
+                        break;
+                    case 'reserver':
+                        button.classList.add('btn-reserver');
+                        button.innerHTML = '<i class="fas fa-calendar-check"></i> Réserver';
+                        button.onclick = () => reserverService(service.name, service.phone);
+                        break;
+                    case 'commander':
+                        button.classList.add('btn-commander');
+                        button.innerHTML = '<i class="fas fa-shopping-cart"></i> Commander';
+                        button.onclick = () => commanderService(service.name, service.phone);
+                        break;
+                }
+                
+                buttonContainer.appendChild(button);
+            });
+            
+            return buttonContainer;
+        }
 
         // Menu mobile
         mobileMenuBtn.addEventListener('click', () => {
@@ -1549,20 +1863,29 @@
                     iconClass = iconMap[service.type] || 'fas fa-building';
                     
                     resultCard.innerHTML = `
-                        <div class="result-header">
-                            <div class="result-icon">
-                                <i class="${iconClass}"></i>
-                            </div>
-                            <div class="result-name">${service.name}</div>
+                        <div class="result-image">
+                            <img src="${service.image}" alt="${service.name}" loading="lazy">
                         </div>
-                        <div class="result-type">${service.category}</div>
-                        <div class="result-details">
-                            <p><i class="fas fa-map-marker-alt"></i> ${service.address}</p>
-                            <p><i class="fas fa-phone"></i> ${service.phone}</p>
-                            <p><i class="fas fa-clock"></i> ${service.hours}</p>
-                            <p style="margin-top: 15px;">${service.description}</p>
+                        <div class="result-content">
+                            <div class="result-header">
+                                <div class="result-icon">
+                                    <i class="${iconClass}"></i>
+                                </div>
+                                <div class="result-name">${service.name}</div>
+                            </div>
+                            <div class="result-type">${service.category}</div>
+                            <div class="result-details">
+                                <p><i class="fas fa-map-marker-alt"></i> ${service.address}</p>
+                                <p><i class="fas fa-phone"></i> ${service.phone}</p>
+                                <p><i class="fas fa-clock"></i> ${service.hours}</p>
+                                <p>${service.description}</p>
+                            </div>
                         </div>
                     `;
+                    
+                    // Ajouter les boutons
+                    const buttonContainer = createButtons(service);
+                    resultCard.querySelector('.result-content').appendChild(buttonContainer);
                     
                     resultsContainer.appendChild(resultCard);
                 }, index * 50); // Délai progressif pour l'animation
@@ -1736,4 +2059,3 @@
     </script>
 </body>
 </html>
-
